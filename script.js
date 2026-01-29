@@ -1,6 +1,6 @@
 // Highlight nav link on scroll
 const sections = document.querySelectorAll("section");
-const navLinks = document.querySelectorAll(".nav-links a");
+const navLinkElements = document.querySelectorAll(".nav-links a");
 
 window.addEventListener("scroll", () => {
     let current = "";
@@ -12,12 +12,29 @@ window.addEventListener("scroll", () => {
         }
     });
 
-    navLinks.forEach(link => {
+    navLinkElements.forEach(link => {
         link.classList.remove("active");
         if (link.getAttribute("href").includes(current)) {
             link.classList.add("active");
         }
     });
+});
+
+// Mobile menu functionality
+const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+const navLinksContainer = document.querySelector('.nav-links');
+
+mobileMenuBtn.addEventListener('click', () => {
+    mobileMenuBtn.classList.toggle('active');
+    navLinksContainer.classList.toggle('active');
+});
+
+// Close mobile menu when clicking on a link
+navLinksContainer.addEventListener('click', (e) => {
+    if (e.target.tagName === 'A') {
+        mobileMenuBtn.classList.remove('active');
+        navLinksContainer.classList.remove('active');
+    }
 });
 
 // Service box expansion functionality
