@@ -37,20 +37,22 @@ const navLinkElements = document.querySelectorAll(".nav-links a");
 const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
 const navLinksContainer = document.querySelector('.nav-links');
 
-mobileMenuBtn.addEventListener('click', () => {
+function toggleMenu() {
     mobileMenuBtn.classList.toggle('active');
     navLinksContainer.classList.toggle('active');
     document.body.classList.toggle('menu-open');
-});
+}
 
-// Close mobile menu when clicking on a link
-navLinksContainer.addEventListener('click', (e) => {
+function closeMenu(e) {
     if (e.target.tagName === 'A') {
         mobileMenuBtn.classList.remove('active');
         navLinksContainer.classList.remove('active');
         document.body.classList.remove('menu-open');
     }
-});
+}
+
+mobileMenuBtn.addEventListener('click', toggleMenu);
+navLinksContainer.addEventListener('click', closeMenu);
 
 // Service box expansion functionality
 document.addEventListener('DOMContentLoaded', function () {
@@ -133,12 +135,14 @@ document.addEventListener('DOMContentLoaded', function () {
     // Initial setup
     setupMobileInteraction();
 
-    // Handle window resize - re-evaluate mobile state
+    // Debounced resize handler
+    function handleResize() {
+        setupMobileInteraction();
+    }
+
     let resizeTimer;
-    window.addEventListener('resize', function () {
+    window.addEventListener('resize', () => {
         clearTimeout(resizeTimer);
-        resizeTimer = setTimeout(function () {
-            setupMobileInteraction();
-        }, 250);
+        resizeTimer = setTimeout(handleResize, 250);
     });
 });

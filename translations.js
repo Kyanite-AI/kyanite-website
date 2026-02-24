@@ -15,7 +15,7 @@ const translations = {
         hero_trust: 'Trusted by Swedish businesses in Real Estate, Healthcare & Logistics.',
         hero_cta_demo: 'Listen to Demo',
         hero_cta_pilot: 'Book a 1-Week Free Pilot',
-        hero_learn_more: 'See the Problem We Solve',
+        see_problem: 'See the Problem We Solve',
 
         // Problem Section
         problem_title: 'The Hidden Cost of Missed Calls',
@@ -142,6 +142,10 @@ const translations = {
         footer_tagline: 'Never Miss a Lead Again.',
         footer_subtitle: 'AI-powered voice receptionists for Swedish businesses.',
         footer_links: 'Quick Links',
+        footer_problem: 'The Problem',
+        footer_services: 'Admin Dashboard',
+        footer_industries: 'Industries',
+        footer_trust: 'Security',
         footer_contact: 'Contact',
         footer_legal: 'GDPR Compliant | Personuppgiftsbiträde | Data Processor Agreement Available',
         footer_copyright: '© 2025 Kyanite AI Automation Agency. All rights reserved.',
@@ -183,7 +187,7 @@ const translations = {
         hero_trust: 'Litad av svenska företag inom Fastigheter, Vård & Logistik.',
         hero_cta_demo: 'Lyssna på Demo',
         hero_cta_pilot: 'Boka en 1-Veckas Gratis Pilot',
-        hero_learn_more: 'Se Problemet Vi Löser',
+        see_problem: 'Se Problemet Vi Löser',
 
         // Problem Section
         problem_title: 'Den Dolda Kostnaden av Missade Samtal',
@@ -310,6 +314,10 @@ const translations = {
         footer_tagline: 'Aldrig Missa Ett Lead Igen.',
         footer_subtitle: 'AI-drivna röstreceptionister för svenska företag.',
         footer_links: 'Snabblänkar',
+        footer_problem: 'Problemet',
+        footer_services: 'Admin Dashboard',
+        footer_industries: 'Branscher',
+        footer_trust: 'Säkerhet',
         footer_contact: 'Kontakt',
         footer_legal: 'GDPR Compliant | Personuppgiftsbiträde | Databehandlingsavtal Tillgängligt',
         footer_copyright: '© 2025 Kyanite AI Automation Agency. Alla rättigheter reserverade.',

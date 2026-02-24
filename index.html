@@ -17,8 +17,8 @@
 <body>
 
     <!-- Animated Background -->
-    <div class="gradient-background"></div>
-    <div class="blur-shapes">
+    <div class="gradient-background" id="gradient-background"></div>
+    <div class="blur-shapes" id="blur-shapes">
         <div class="blur-shape shape-1"></div>
         <div class="blur-shape shape-2"></div>
         <div class="blur-shape shape-3"></div>
@@ -28,7 +28,7 @@
     </div>
 
     <!-- Dotted Grid Background -->
-    <div class="dotted-grid"></div>
+    <div class="dotted-grid" id="dotted-grid"></div>
 
     <!-- Navbar -->
     <nav class="navbar">
@@ -78,7 +78,7 @@
         <!-- Bottom Object + Arrow -->
         <div class="home-bottom">
             <div class="custom-object">
-                <a href="#problem">See the Problem We Solve</a>
+                <a href="#problem" data-i18n="see_problem">See the Problem We Solve</a>
             </div>
             <a href="#problem" class="arrow-down">↓</a>
         </div>
@@ -398,17 +398,17 @@
                     <h5 data-i18n="footer_links">Quick Links</h5>
                     <ul class="footer-links">
                         <li><a href="#home" data-i18n="nav_home">Home</a></li>
-                        <li><a href="#problem">The Problem</a></li>
-                        <li><a href="#services">Admin Dashboard</a></li>
-                        <li><a href="#industries">Industries</a></li>
-                        <li><a href="#trust">Security</a></li>
+                        <li><a href="#problem" data-i18n="footer_problem">The Problem</a></li>
+                        <li><a href="#services" data-i18n="footer_services">Admin Dashboard</a></li>
+                        <li><a href="#industries" data-i18n="footer_industries">Industries</a></li>
+                        <li><a href="#trust" data-i18n="footer_trust">Security</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
                     <h5 data-i18n="footer_contact">Contact</h5>
                     <ul class="footer-contact">
-                        <li>kyaniteautomations@gmail.com</li>
-                        <li>+46 76 329 28 61</li>
+                        <li data-i18n="contact_email">kyaniteautomations@gmail.com</li>
+                        <li data-i18n="contact_phone">+46 76 329 28 61</li>
                         <li data-i18n="contact_location">Stockholm, Sweden</li>
                     </ul>
                 </div>
