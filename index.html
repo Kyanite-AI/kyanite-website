@@ -32,51 +32,48 @@
 
     <!-- Navbar -->
     <nav class="navbar">
-        <img src="kyanite-header-with-logo.svg" alt="Kyanite" class="logo" />
+        <img src="kyanite-header-with-logo.svg" alt="Kyanite" class="logo" loading="eager" fetchpriority="high" />
         <button class="mobile-menu-btn" aria-label="Toggle mobile menu">
             <span></span>
         </button>
         <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About Us</a></li>
-            <li><a href="#why">Why Us</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#contact">Contact Us</a></li>
+            <li><a href="#home" data-i18n="nav_home">Home</a></li>
+            <li><a href="#about" data-i18n="nav_about">About Us</a></li>
+            <li><a href="#why" data-i18n="nav_why">Why Us</a></li>
+            <li><a href="#services" data-i18n="nav_services">Services</a></li>
+            <li><a href="#contact" data-i18n="nav_contact">Contact Us</a></li>
+            <li class="lang-switcher-mobile"><button class="lang-switcher" id="lang-switcher" aria-label="Switch language" onclick="toggleLanguage()">
+                <span class="lang-flag">🇬🇧</span>
+                <span class="lang-text">EN</span>
+            </button></li>
         </ul>
+        <button class="lang-switcher lang-switcher-desktop" id="lang-switcher-desktop" aria-label="Switch language" onclick="toggleLanguage()">
+            <span class="lang-flag">🇬🇧</span>
+            <span class="lang-text">EN</span>
+        </button>
     </nav>
 
     <!-- Home / Hero Section -->
     <section class="home" id="home">
         <div class="content-box">
-            <h1 class="hero-claim">Niklas, Meet Your New 24/7 AI Receptionist</h1>
+            <h1 class="hero-claim" data-i18n="hero_claim">Mary, Meet Your New 24/7 AI Receptionist</h1>
             <h1 class="slogan">
-                Never Miss a Lead in Sweden Again
-                <img src="kyanite-crystal.svg" alt="Icon" class="slogan-img" />
+                <span data-i18n="hero_slogan">Never Miss a Lead in Sweden Again</span>
+                <img src="kyanite-crystal.svg" alt="Icon" class="slogan-img" loading="eager" fetchpriority="high" />
             </h1>
-            <p class="hero-subheadline">
+            <p class="hero-subheadline" data-i18n="hero_subheadline">
                 An intelligent voice assistant that handles calls, books meetings, and updates your database in real-time.
                 Cut operational costs by 70% while providing instant response to every customer.
             </p>
-            <p class="hero-trust"><strong>Trusted by Swedish businesses in Real Estate, Healthcare & Logistics.</strong></p>
+            <p class="hero-trust"><strong data-i18n="hero_trust">Trusted by Swedish businesses in Real Estate, Healthcare & Logistics.</strong></p>
             <div class="hero-cta-group">
-                <a href="demo.html" class="cta-btn cta-primary">
+                <a href="demo.html" class="cta-btn cta-primary" data-i18n="hero_cta_demo">
                     <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <polygon points="5 3 19 12 5 21 5 3"></polygon>
                     </svg>
-                    Listen to Demo
                 </a>
-                <a href="book.html" class="cta-btn cta-secondary">Book a 1-Week Free Pilot</a>
+                <a href="book.html" class="cta-btn cta-secondary" data-i18n="hero_cta_pilot">Book a 1-Week Free Pilot</a>
             </div>
-            <!-- Swedish variant (commented for reference):
-            <h1 class="hero-claim">Niklas, Möt Din Nya 24/7 AI-Receptionist</h1>
-            <h1 class="slogan">Aldrig Missa Ett Lead i Sverige Igen</h1>
-            <p class="hero-subheadline">En intelligent röstassistent som hanterar samtal, bokar möten och uppdaterar din databas i realtid.
-                Sänk driftskostnaderna med 70% samtidigt som varje kund får omedelbar respons.</p>
-            <div class="hero-cta-group">
-                <a href="#demo" class="cta-btn cta-primary">Lyssna på Demo</a>
-                <a href="book.html" class="cta-btn cta-secondary">Boka en 1-Veckas Gratis Pilot</a>
-            </div>
-            -->
         </div>
         <!-- Bottom Object + Arrow -->
         <div class="home-bottom">
@@ -91,25 +88,25 @@
     <section class="about" id="about">
         <div class="about-header">
             <h1 class="section-header">About Us</h1>
-            <img src="kyanite.png" alt="Kyanite Logo" class="company-logo">
+            <img src="kyanite.png" alt="Kyanite Logo" class="company-logo" loading="lazy" />
         </div>
 
         <div class="about-content">
             <!-- Text Section -->
             <div class="about-text hidden-left">
-                <p>
+                <p data-i18n="about_p1">
                     At Kyanite, we don't just deliver AI-powered automations—we deliver measurable results.
                     Our AI voice receptionists help Swedish businesses save time, cut costs by up to 70%, and never miss a customer call again.
                 </p>
-                <p>
+                <p data-i18n="about_p2">
                     We've deployed solutions across Real Estate, Healthcare, and Logistics—proving that the right AI implementation
                     doesn't replace your team, it amplifies them. Our systems handle the repetitive calls so your people can focus on high-value work.
                 </p>
-                <p>
+                <p data-i18n="about_p3">
                     We're so confident in our technology that we offer a free 1-week pilot. No upfront cost, no commitment.
                     Just 7 days of your calls handled by AI, and you decide if it's worth keeping.
                 </p>
-                <p>
+                <p data-i18n="about_p4">
                     Our mission: Make enterprise-grade AI automation accessible to every Swedish business—secure, compliant, and built for scale.
                 </p>
             </div>
@@ -117,10 +114,10 @@
             <!-- Team Images -->
             <div class="about-images">
                 <div class="person">
-                    <img src="stepan2.jpg" alt="Stepan" class="person-img">
-                    <p class="person-name">Stepan – Co-Founder</p>
-                    <p class="person-name">Bridging the gap between Economics and Generative AI to help Swedish businesses scale through automation.</p>
-                    <p class="person-name">"I focus on providing real value through work that speaks for itself."</p>
+                    <img src="stepan2.jpg" alt="Stepan" class="person-img" loading="lazy" />
+                    <p class="person-name" data-i18n="about_founder_name">Stepan – Co-Founder</p>
+                    <p class="person-name" data-i18n="about_founder_desc">Bridging the gap between Economics and Generative AI to help Swedish businesses scale through automation.</p>
+                    <p class="person-name" data-i18n="about_founder_quote">"I focus on providing real value through work that speaks for itself."</p>
                 </div>
             </div>
         </div>
@@ -128,75 +125,70 @@
 
     <!-- The Problem Swedish Businesses Face -->
     <section class="problem" id="problem">
-        <h1 class="section-header">The Hidden Cost of Missed Calls</h1>
-        <p class="section-intro">Every unanswered call is a lost opportunity. Swedish businesses lose up to 30% of potential revenue from calls missed outside office hours.</p>
+        <h1 class="section-header" data-i18n="problem_title">The Hidden Cost of Missed Calls</h1>
+        <p class="section-intro" data-i18n="problem_intro">Every unanswered call is a lost opportunity. Swedish businesses lose up to 30% of potential revenue from calls missed outside office hours.</p>
 
         <div class="problem-grid">
             <div class="problem-card">
                 <div class="problem-icon">💰</div>
-                <h4>Expensive Staffing</h4>
-                <p>A full-time receptionist in Sweden costs 450,000–600,000 SEK/year including benefits, taxes, and training. Most calls don't require human empathy—just accurate, instant answers.</p>
-                <p class="problem-stat"><strong>Cost:</strong> 450,000–600,000 SEK/year per employee</p>
+                <h4 data-i18n="problem_card1_title">Expensive Staffing</h4>
+                <p data-i18n="problem_card1_desc">A full-time receptionist in Sweden costs 450,000–600,000 SEK/year including benefits, taxes, and training. Most calls don't require human empathy—just accurate, instant answers.</p>
+                <p class="problem-stat"><strong data-i18n="problem_card1_stat">Cost:</strong> 450,000–600,000 SEK/year per employee</p>
             </div>
 
             <div class="problem-card">
                 <div class="problem-icon">🕘</div>
-                <h4>Limited Hours (9–17)</h4>
-                <p>Your customers work the same hours you do. They call during lunch breaks, evenings, and weekends. When you don't answer, they call your competitor—who does.</p>
-                <p class="problem-stat"><strong>Lost calls:</strong> 40% happen after 17:00 & weekends</p>
+                <h4 data-i18n="problem_card2_title">Limited Hours (9–17)</h4>
+                <p data-i18n="problem_card2_desc">Your customers work the same hours you do. They call during lunch breaks, evenings, and weekends. When you don't answer, they call your competitor—who does.</p>
+                <p class="problem-stat"><strong data-i18n="problem_card2_stat">Lost calls:</strong> 40% happen after 17:00 & weekends</p>
             </div>
 
             <div class="problem-card">
                 <div class="problem-icon">📝</div>
-                <h4>Human Error in CRM</h4>
-                <p>Manual data entry leads to mistakes: wrong phone numbers, missed follow-ups, forgotten appointments. Your team spends 2–3 hours daily updating systems instead of selling.</p>
-                <p class="problem-stat"><strong>Time wasted:</strong> 10–15 hours/week on admin</p>
+                <h4 data-i18n="problem_card3_title">Human Error in CRM</h4>
+                <p data-i18n="problem_card3_desc">Manual data entry leads to mistakes: wrong phone numbers, missed follow-ups, forgotten appointments. Your team spends 2–3 hours daily updating systems instead of selling.</p>
+                <p class="problem-stat"><strong data-i18n="problem_card3_stat">Time wasted:</strong> 10–15 hours/week on admin</p>
             </div>
 
             <div class="problem-card">
                 <div class="problem-icon">🎄</div>
-                <h4>Holidays & Peak Seasons</h4>
-                <p>Summer vacations, Christmas, sick days—your phone still rings. Temporary staff cost more and don't know your business. Every missed call during peak season is revenue gone.</p>
-                <p class="problem-stat"><strong>Peak loss:</strong> Up to 50% of calls during holidays</p>
+                <h4 data-i18n="problem_card4_title">Holidays & Peak Seasons</h4>
+                <p data-i18n="problem_card4_desc">Summer vacations, Christmas, sick days—your phone still rings. Temporary staff cost more and don't know your business. Every missed call during peak season is revenue gone.</p>
+                <p class="problem-stat"><strong data-i18n="problem_card4_stat">Peak loss:</strong> Up to 50% of calls during holidays</p>
             </div>
         </div>
 
         <div class="problem-cta">
-            <p><strong>The solution isn't hiring more people. It's smarter automation.</strong></p>
-            <a href="#services" class="cta-btn">See How Kyanite Solves This</a>
+            <p><strong data-i18n="problem_cta_text">The solution isn't hiring more people. It's smarter automation.</strong></p>
+            <a href="#services" class="cta-btn" data-i18n="problem_cta_btn">See How Kyanite Solves This</a>
         </div>
-
-        <!-- Swedish variant:
-        <h1 class="section-header">Den Dolda Kostnaden av Missade Samtal</h1>
-        <p class="section-intro">Varje obesvarat samtal är en förlorad möjlighet. Svenska företag förlorar upp till 30% av potentiell intäkt från samtal utanför kontorstid.</p>
-        -->
     </section>
 
     <!-- Why Us -->
     <section class="why" id="why">
-        <h1 class="section-header">Why Swedish Businesses Choose Kyanite</h1>
+        <h1 class="section-header" data-i18n="why_title">Why Swedish Businesses Choose Kyanite</h1>
         <div class="why-us">
             <div class="reasons-boxes">
                 <div class="reason-box">
-                    <img src="prof_reliable.png" alt="24/7 Availability" class="box-icon" />
-                    <h4>24/7/365 Availability</h4>
-                    <p>
+                    <img src="prof_reliable.png" alt="24/7 Availability" class="box-icon" loading="lazy" />
+                    <h4 data-i18n="why_card1_title">24/7/365 Availability</h4>
+                    <p data-i18n="why_card1_desc">
                         Your AI receptionist never sleeps, never takes sick leave, and never goes on vacation.
                         Handle calls at 3 AM on Christmas Day with the same professionalism as Monday morning.
                     </p>
                 </div>
                 <div class="reason-box">
-                    <img src="custom_solutions.png" alt="Native Swedish" class="box-icon" />
-                    <h4>Native Swedish & English</h4>
-                    <p>
+                    <img src="custom_solutions.png" alt="Native Swedish" class="box-icon" loading="lazy" />
+                    <h4 data-i18n="why_card2_title">Native Swedish & English</h4>
+                    <p data-i18n="why_card2_desc">
                         Perfect accent in both Swedish and English. No robotic voices. Your customers won't know
                         they're talking to AI until they see the instant follow-up in their inbox.
                     </p>
                 </div>
                 <div class="reason-box">
-                    <img src="focused_growth.png" alt="70% Cost Reduction" class="box-icon" />
-                    <h4>70% Lower Operational Costs</h4>
-                    <p>
+                    <img src="focused_growth.png" alt="70% Cost Reduction" class="box-icon" loading="lazy" />
+                    <h4 data-i18n="why_card3_title">70% Lower Operational Costs</h4>
+                    <p data-i18n="why_card3_desc">
                         Replace an entire call center team with one AI system. No salaries, no benefits, no training.
                         Just predictable monthly pricing that scales with your call volume.
                     </p>
@@ -207,212 +199,205 @@
 
     <!-- Services / Admin Experience -->
     <section class="services" id="services">
-        <h1 class="section-header">Complete Control Through Your Admin Dashboard</h1>
-        <p class="section-intro">Every call transcribed. Every action tracked. Every insight at your fingertips.</p>
+        <h1 class="section-header" data-i18n="services_title">Complete Control Through Your Admin Dashboard</h1>
+        <p class="section-intro" data-i18n="services_intro">Every call transcribed. Every action tracked. Every insight at your fingertips.</p>
 
         <div class="admin-showcase">
             <div class="admin-feature-card">
                 <div class="admin-icon">📊</div>
-                <h4>AI Call Summary</h4>
-                <p>Intelligent transcription with automatic extraction of key information: customer name, phone, budget, preferences, and intent. Get a structured summary in your inbox within seconds of each call.</p>
+                <h4 data-i18n="services_card1_title">AI Call Summary</h4>
+                <p data-i18n="services_card1_desc">Intelligent transcription with automatic extraction of key information: customer name, phone, budget, preferences, and intent. Get a structured summary in your inbox within seconds of each call.</p>
                 <ul class="feature-list">
-                    <li>Full call transcription in Swedish or English</li>
-                    <li>Action items highlighted automatically</li>
-                    <li>Search across all historical calls</li>
+                    <li data-i18n="services_card1_li1">Full call transcription in Swedish or English</li>
+                    <li data-i18n="services_card1_li2">Auto-tagging by topic and sentiment</li>
+                    <li data-i18n="services_card1_li3">Action items highlighted automatically</li>
+                    <li data-i18n="services_card1_li4">Search across all historical calls</li>
                 </ul>
             </div>
 
             <div class="admin-feature-card">
                 <div class="admin-icon">🔐</div>
-                <h4>Access Management</h4>
-                <p>Control who sees what. Grant different access levels to your team members—realtors see only their clients, managers see everything, admins control permissions.</p>
+                <h4 data-i18n="services_card2_title">Access Management</h4>
+                <p data-i18n="services_card2_desc">Control who sees what. Grant different access levels to your team members—realtors see only their clients, managers see everything, admins control permissions.</p>
                 <ul class="feature-list">
-                    <li>Role-based permissions (Admin, Manager, Agent)</li>
-                    <li>Audit log of all user actions</li>
-                    <li>SSO integration for enterprise</li>
-                    <li>GDPR-compliant data access controls</li>
+                    <li data-i18n="services_card2_li1">Role-based permissions (Admin, Manager, Agent)</li>
+                    <li data-i18n="services_card2_li2">Audit log of all user actions</li>
+                    <li data-i18n="services_card2_li3">SSO integration for enterprise</li>
+                    <li data-i18n="services_card2_li4">GDPR-compliant data access controls</li>
                 </ul>
             </div>
 
             <div class="admin-feature-card">
                 <div class="admin-icon">🔗</div>
-                <h4>Database & Calendar Integration</h4>
-                <p>Your AI updates your existing systems in real-time. Bookings appear in your calendar. Lead data flows into your CRM. No manual entry, no errors.</p>
+                <h4 data-i18n="services_card3_title">Database & Calendar Integration</h4>
+                <p data-i18n="services_card3_desc">Your AI updates your existing systems in real-time. Bookings appear in your calendar. Lead data flows into your CRM. No manual entry, no errors.</p>
                 <ul class="feature-list">
-                    <li>Native integrations: Visma, Fortnox, Google Calendar</li>
-                    <li>REST API for custom connections</li>
-                    <li>Automatic follow-up email/SMS triggers</li>
+                    <li data-i18n="services_card3_li1">Native integrations: Visma, Fortnox, Google Calendar</li>
+                    <li data-i18n="services_card3_li2">REST API for custom connections</li>
+                    <li data-i18n="services_card3_li3">Two-way sync with your CRM</li>
+                    <li data-i18n="services_card3_li4">Automatic follow-up email/SMS triggers</li>
                 </ul>
             </div>
 
             <div class="admin-feature-card">
                 <div class="admin-icon">📈</div>
-                <h4>Analytics & Reporting</h4>
-                <p>Track what matters: call volume, conversion rates, peak hours, common questions. Make data-driven decisions to optimize your operations.</p>
+                <h4 data-i18n="services_card4_title">Analytics & Reporting</h4>
+                <p data-i18n="services_card4_desc">Track what matters: call volume, conversion rates, peak hours, common questions. Make data-driven decisions to optimize your operations.</p>
                 <ul class="feature-list">
-                    <li>Real-time dashboard with key metrics</li>
-                    <li>Monthly performance reports</li>
-                    <li>Call retelling from AI</li>
-                    <li>Client interest scores based on call content</li>
+                    <li data-i18n="services_card4_li1">Real-time dashboard with key metrics</li>
+                    <li data-i18n="services_card4_li2">Weekly/monthly performance reports</li>
+                    <li data-i18n="services_card4_li3">Call recording playback</li>
+                    <li data-i18n="services_card4_li4">ROI calculator showing cost savings</li>
                 </ul>
             </div>
         </div>
 
         <div class="admin-cta">
-            <a href="book.html" class="cta-btn">See Live Dashboard Demo</a>
+            <a href="book.html" class="cta-btn" data-i18n="services_cta">See Live Dashboard Demo</a>
         </div>
     </section>
 
     <!-- Industry Solutions -->
     <section class="industries" id="industries">
-        <h1 class="section-header">Built for Swedish Industries</h1>
-        <p class="section-intro">One platform. Tailored solutions for your specific business needs.</p>
+        <h1 class="section-header" data-i18n="industries_title">Built for Swedish Industries</h1>
+        <p class="section-intro" data-i18n="industries_intro">One platform. Tailored solutions for your specific business needs.</p>
 
         <div class="industry-grid">
             <!-- Real Estate -->
             <div class="industry-card real-estate">
                 <div class="industry-header">
                     <span class="industry-icon">🏢</span>
-                    <h4>Real Estate Agencies</h4>
+                    <h4 data-i18n="industries_re_title">Real Estate Agencies</h4>
                 </div>
-                <p class="industry-pain">Problem: Agents waste 3–4 hours daily answering the same questions about listings, scheduling viewings, and qualifying leads.</p>
+                <p class="industry-pain" data-i18n="industries_re_pain">Problem: Agents waste 3–4 hours daily answering the same questions about listings, scheduling viewings, and qualifying leads.</p>
                 <div class="industry-solution">
-                    <h5>Your AI Receptionist Handles:</h5>
+                    <h5 data-i18n="industries_re_solution">Your AI Receptionist Handles:</h5>
                     <ul class="industry-list">
-                        <li><strong>Budget Pre-Qualification:</strong> "What's your budget range?" "Have you been pre-approved for a mortgage?"</li>
-                        <li><strong>Property Matching:</strong> Automatically matches caller preferences with available listings</li>
-                        <li><strong>Viewing Scheduling:</strong> Books property showings directly in agent's calendar</li>
-                        <li><strong>Follow-Up Automation:</strong> Sends property details via SMS/email immediately after the call</li>
+                        <li data-i18n="industries_re_li1"><strong>Budget Pre-Qualification:</strong> "What's your budget range?" "Have you been pre-approved for a mortgage?"</li>
+                        <li data-i18n="industries_re_li2"><strong>Property Matching:</strong> Automatically matches caller preferences with available listings</li>
+                        <li data-i18n="industries_re_li3"><strong>Viewing Scheduling:</strong> Books property showings directly in agent's calendar</li>
+                        <li data-i18n="industries_re_li4"><strong>Follow-Up Automation:</strong> Sends property details via SMS/email immediately after the call</li>
                     </ul>
                 </div>
-                <p class="industry-result"><strong>Result:</strong> Agents focus on closing deals. Every lead is qualified before the first showing.</p>
-                <!-- Swedish: Fastighetsbyråer -->
+                <p class="industry-result" data-i18n="industries_re_result"><strong>Result:</strong> Agents focus on closing deals. Every lead is qualified before the first showing.</p>
             </div>
 
             <!-- Medical Clinics -->
             <div class="industry-card medical">
                 <div class="industry-header">
                     <span class="industry-icon">🏥</span>
-                    <h4>Medical Clinics & Dental</h4>
+                    <h4 data-i18n="industries_med_title">Medical Clinics & Dental</h4>
                 </div>
-                <p class="industry-pain">Problem: Receptionists are overwhelmed with appointment booking, cancellations, and FAQ—taking time away from in-person patients.</p>
+                <p class="industry-pain" data-i18n="industries_med_pain">Problem: Receptionists are overwhelmed with appointment booking, cancellations, and FAQ—taking time away from in-person patients.</p>
                 <div class="industry-solution">
-                    <h5>Your AI Receptionist Handles:</h5>
+                    <h5 data-i18n="industries_med_solution">Your AI Receptionist Handles:</h5>
                     <ul class="industry-list">
-                        <li><strong>Patient Booking:</strong> "I need to see a doctor this week." Books available slots in your clinic system</li>
-                        <li><strong>FAQ Automation:</strong> Opening hours, parking info, preparation instructions, insurance accepted</li>
-                        <li><strong>Prescription Refills:</strong> Collects patient info and forwards to medical staff</li>
-                        <li><strong>Cancellation Management:</strong> Automatically fills cancelled slots from waitlist</li>
+                        <li data-i18n="industries_med_li1"><strong>Patient Booking:</strong> "I need to see a doctor this week." Books available slots in your clinic system</li>
+                        <li data-i18n="industries_med_li2"><strong>FAQ Automation:</strong> Opening hours, parking info, preparation instructions, insurance accepted</li>
+                        <li data-i18n="industries_med_li3"><strong>Prescription Refills:</strong> Collects patient info and forwards to medical staff</li>
+                        <li data-i18n="industries_med_li4"><strong>Cancellation Management:</strong> Automatically fills cancelled slots from waitlist</li>
                     </ul>
                 </div>
-                <p class="industry-result"><strong>Result:</strong> Receptionists focus on patients in the office. Zero missed appointments from phone queues.</p>
-                <!-- Swedish: Vårdcentraler & Tandvård -->
+                <p class="industry-result" data-i18n="industries_med_result"><strong>Result:</strong> Receptionists focus on patients in the office. Zero missed appointments from phone queues.</p>
             </div>
 
             <!-- Logistics -->
             <div class="industry-card logistics">
                 <div class="industry-header">
                     <span class="industry-icon">🚚</span>
-                    <h4>Logistics & Delivery</h4>
+                    <h4 data-i18n="industries_log_title">Logistics & Delivery</h4>
                 </div>
-                <p class="industry-pain">Problem: Customer service is flooded with "Where is my order?" calls. Tracking updates don't answer specific delivery questions.</p>
+                <p class="industry-pain" data-i18n="industries_log_pain">Problem: Customer service is flooded with "Where is my order?" calls. Tracking updates don't answer specific delivery questions.</p>
                 <div class="industry-solution">
-                    <h5>Your AI Receptionist Handles:</h5>
+                    <h5 data-i18n="industries_log_solution">Your AI Receptionist Handles:</h5>
                     <ul class="industry-list">
-                        <li><strong>Real-Time Tracking:</strong> "Where's my shipment?" AI checks database and provides live status</li>
-                        <li><strong>Delivery Rescheduling:</strong> Customer not home? AI books new delivery time automatically</li>
-                        <li><strong>Proof of Delivery:</strong> Sends POD documents via SMS/email on request</li>
-                        <li><strong>Damaged Goods Claims:</strong> Collects claim details and creates support ticket</li>
+                        <li data-i18n="industries_log_li1"><strong>Real-Time Tracking:</strong> "Where's my shipment?" AI checks database and provides live status</li>
+                        <li data-i18n="industries_log_li2"><strong>Delivery Rescheduling:</strong> Customer not home? AI books new delivery time automatically</li>
+                        <li data-i18n="industries_log_li3"><strong>Proof of Delivery:</strong> Sends POD documents via SMS/email on request</li>
+                        <li data-i18n="industries_log_li4"><strong>Damaged Goods Claims:</strong> Collects claim details and creates support ticket</li>
                     </ul>
                 </div>
-                <p class="industry-result"><strong>Result:</strong> 60% reduction in support calls. Customers get instant answers without waiting on hold.</p>
-                <!-- Swedish: Logistik & Transport -->
+                <p class="industry-result" data-i18n="industries_log_result"><strong>Result:</strong> 60% reduction in support calls. Customers get instant answers without waiting on hold.</p>
             </div>
         </div>
 
         <div class="industry-cta">
-            <p><strong>Don't see your industry? We build custom solutions.</strong></p>
-            <a href="#contact" class="cta-btn cta-secondary">Talk to Our Team</a>
+            <p><strong data-i18n="industries_cta_text">Don't see your industry? We build custom solutions.</strong></p>
+            <a href="#contact" class="cta-btn cta-secondary" data-i18n="industries_cta_btn">Talk to Our Team</a>
         </div>
     </section>
 
     <!-- Trust & Security -->
     <section class="trust" id="trust">
-        <h1 class="section-header">Enterprise-Grade Security & Compliance</h1>
-        <p class="section-intro">Your data is protected. Your customers' privacy is guaranteed.</p>
+        <h1 class="section-header" data-i18n="trust_title">Enterprise-Grade Security & Compliance</h1>
+        <p class="section-intro" data-i18n="trust_intro">Your data is protected. Your customers' privacy is guaranteed.</p>
 
         <div class="trust-grid">
             <div class="trust-card">
                 <div class="trust-icon">🇪🇺</div>
-                <h4>GDPR Compliant</h4>
-                <p>All data stored on EU servers (Stockholm region). Full data processing agreements available. Right to deletion automated. We're your personuppgiftsbiträde (data processor).</p>
+                <h4 data-i18n="trust_card1_title">GDPR Compliant</h4>
+                <p data-i18n="trust_card1_desc">All data stored on EU servers (Stockholm region). Full data processing agreements available. Right to deletion automated. We're your personuppgiftsbiträde (data processor).</p>
             </div>
 
             <div class="trust-card">
                 <div class="trust-icon">🔒</div>
-                <h4>Bank-Level Encryption</h4>
-                <p>TLS 1.3 for data in transit. AES-256 encryption at rest. Call retellings stored securely with access logging. SOC 2 Type II certified infrastructure.</p>
+                <h4 data-i18n="trust_card2_title">Bank-Level Encryption</h4>
+                <p data-i18n="trust_card2_desc">TLS 1.3 for data in transit. AES-256 encryption at rest. Call recordings stored securely with access logging.</p>
             </div>
 
             <div class="trust-card">
                 <div class="trust-icon">🌍</div>
-                <h4>Multilingual Support</h4>
-                <p>Perfect Swedish (svenska) and English out of the box. Additional languages available on request. Natural accent, not robotic text-to-speech.</p>
+                <h4 data-i18n="trust_card3_title">Multilingual Support</h4>
+                <p data-i18n="trust_card3_desc">Perfect Swedish (svenska) and English out of the box. Additional languages available on request. Natural accent, not robotic text-to-speech.</p>
             </div>
 
             <div class="trust-card">
                 <div class="trust-icon">📞</div>
-                <h4>99.9% Uptime SLA</h4>
-                <p>Redundant systems across multiple data centers. Automatic failover. Your phone line never goes down. Guaranteed uptime in contract.</p>
+                <h4 data-i18n="trust_card4_title">99.9% Uptime SLA</h4>
+                <p data-i18n="trust_card4_desc">Redundant systems across multiple data centers. Automatic failover. Your phone line never goes down. Guaranteed uptime in contract.</p>
             </div>
         </div>
     </section>
 
     <!-- Contact -->
     <section class="contact" id="contact">
-        <h1 class="section-header">Start Your 1-Week Free Pilot</h1>
-        <p class="contact-intro">No commitment. No setup fee. Just 7 days of your calls handled by AI.</p>
+        <h1 class="section-header" data-i18n="contact_title">Start Your 1-Week Free Pilot</h1>
+        <p class="contact-intro" data-i18n="contact_intro">No commitment. No setup fee. Just 7 days of your calls handled by AI.</p>
 
         <div class="contact-details">
             <div class="contact-item">
-                <span class="contact-label">Email</span>
+                <span class="contact-label" data-i18n="contact_email_label">Email</span>
                 <a href="mailto:kyaniteautomations@gmail.com">kyaniteautomations@gmail.com</a>
             </div>
             <div class="contact-item">
-                <span class="contact-label">Phone</span>
+                <span class="contact-label" data-i18n="contact_phone_label">Phone</span>
                 <a href="tel:+46763292861">+46 76 329 28 61</a>
             </div>
             <div class="contact-item">
-                <span class="contact-label">Location</span>
-                <span>Stockholm, Sweden</span>
+                <span class="contact-label" data-i18n="contact_location_label">Location</span>
+                <span data-i18n="contact_location">Stockholm, Sweden</span>
             </div>
             <div class="contact-item">
-                <span class="contact-label">Response Time</span>
-                <span>Within 2 hours during business days</span>
+                <span class="contact-label" data-i18n="contact_response_label">Response Time</span>
+                <span data-i18n="contact_response">Within 2 hours during business days</span>
             </div>
         </div>
 
-        <a href="book.html" class="cta-btn">Book Your Free Pilot</a>
-
-        <!-- Swedish variant:
-        <h1 class="section-header">Starta Din 1-Veckas Gratis Pilot</h1>
-        <p class="contact-intro">Ingen bindning. Ingen startavgift. Bara 7 dagar av dina samtal hanterade av AI.</p>
-        <a href="book.html" class="cta-btn">Boka Din Gratis Pilot</a>
-        -->
+        <a href="book.html" class="cta-btn" data-i18n="contact_cta">Book Your Free Pilot</a>
     </section>
 
     <footer>
         <div class="footer-glass">
             <div class="footer-content">
                 <div class="footer-section">
-                    <img src="kyanite-crystal.svg" alt="Kyanite" class="footer-logo" />
-                    <p class="footer-tagline">Never Miss a Lead Again.</p>
-                    <p class="footer-small">AI-powered voice receptionists for Swedish businesses.</p>
+                    <img src="kyanite-crystal.svg" alt="Kyanite" class="footer-logo" loading="lazy" />
+                    <p class="footer-tagline" data-i18n="footer_tagline">Never Miss a Lead Again.</p>
+                    <p class="footer-small" data-i18n="footer_subtitle">AI-powered voice receptionists for Swedish businesses.</p>
                 </div>
                 <div class="footer-section">
-                    <h5>Quick Links</h5>
+                    <h5 data-i18n="footer_links">Quick Links</h5>
                     <ul class="footer-links">
-                        <li><a href="#home">Home</a></li>
+                        <li><a href="#home" data-i18n="nav_home">Home</a></li>
                         <li><a href="#problem">The Problem</a></li>
                         <li><a href="#services">Admin Dashboard</a></li>
                         <li><a href="#industries">Industries</a></li>
@@ -420,21 +405,22 @@
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h5>Contact</h5>
+                    <h5 data-i18n="footer_contact">Contact</h5>
                     <ul class="footer-contact">
                         <li>kyaniteautomations@gmail.com</li>
                         <li>+46 76 329 28 61</li>
-                        <li>Stockholm, Sweden</li>
+                        <li data-i18n="contact_location">Stockholm, Sweden</li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>© 2025 Kyanite AI Automation Agency. All rights reserved.</p>
-                <p class="footer-legal">GDPR Compliant | Personuppgiftsbiträde | Data Processor Agreement Available</p>
+                <p data-i18n="footer_copyright">© 2025 Kyanite AI Automation Agency. All rights reserved.</p>
+                <p class="footer-legal" data-i18n="footer_legal">GDPR Compliant | Personuppgiftsbiträde | Data Processor Agreement Available</p>
             </div>
         </div>
     </footer>
 
+    <script src="translations.js"></script>
     <script src="script.js"></script>
     <script>
         const observer = new IntersectionObserver((entries) => {

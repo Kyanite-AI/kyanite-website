@@ -23,18 +23,22 @@
 
     <!-- Back button -->
     <header class="back-header">
-        <a href="index.html" class="back-btn">← Back to Home</a>
+        <a href="index.html" class="back-btn" data-i18n="book_back">← Home</a>
+        <button class="lang-switcher" id="lang-switcher" aria-label="Switch language" onclick="toggleLanguage()">
+            <span class="lang-flag">🇬🇧</span>
+            <span class="lang-text">EN</span>
+        </button>
     </header>
 
     <main class="booking-container">
-        <h1 class="section-header">Book a Free Call</h1>
+        <h1 class="section-header" data-i18n="book_title">Book a Free Call</h1>
 
         <form action="https://formspree.io/f/mbddgbek" method="POST" class="booking-form">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
-            <input type="text" name="company" placeholder="Company Name">
+            <input type="text" name="name" data-i18n-placeholder="book_name" placeholder="Your Name" required>
+            <input type="email" name="email" data-i18n-placeholder="book_email" placeholder="Your Email" required>
+            <input type="text" name="company" data-i18n-placeholder="book_company" placeholder="Company Name">
 
-            <select name="service" required>
+            <select name="service" data-i18n="book_service" required>
                 <option value="" disabled selected>Select Service</option>
                 <option value="chatbots">AI Chatbots</option>
                 <option value="automation">Workflow Automation</option>
@@ -43,20 +47,22 @@
                 <option value="custom">Custom AI Solution</option>
             </select>
 
-            <select name="budget">
+            <select name="budget" data-i18n="book_budget">
                 <option value="" disabled selected>Budget Range</option>
                 <option value="500-1000">$500 - $1,000</option>
                 <option value="1000-5000">$1,000 - $5,000</option>
                 <option value="5000+">$5,000+</option>
             </select>
 
-            <textarea name="details" placeholder="Tell us more about your project..." rows="5"></textarea>
+            <textarea name="details" data-i18n-placeholder="book_details" placeholder="Tell us more about your project..." rows="5"></textarea>
 
             <div class="form-footer">
-                <button type="submit" class="cta-btn">Submit</button>
+                <button type="submit" class="cta-btn" data-i18n="book_submit">Submit</button>
             </div>
         </form>
     </main>
+
+    <script src="translations.js"></script>
 </body>
 
 </html>

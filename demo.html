@@ -23,12 +23,16 @@
 
     <!-- Back button -->
     <header class="back-header">
-        <a href="index.html" class="back-btn">← Back to Home</a>
+        <a href="index.html" class="back-btn" data-i18n="demo_back">← Home</a>
+        <button class="lang-switcher" id="lang-switcher" aria-label="Switch language" onclick="toggleLanguage()">
+            <span class="lang-flag">🇬🇧</span>
+            <span class="lang-text">EN</span>
+        </button>
     </header>
 
     <main class="demo-container">
-        <h1 class="section-header">Listen to AI Call Demos</h1>
-        <p class="demo-intro">Hear how our AI receptionist handles real business calls in Swedish and English.</p>
+        <h1 class="section-header" data-i18n="demo_title">Listen to AI Call Demos</h1>
+        <p class="demo-intro" data-i18n="demo_intro">Hear how our AI receptionist handles real business calls in Swedish and English.</p>
 
         <!-- Demo Player Section -->
         <div class="demo-player-wrapper">
@@ -36,8 +40,8 @@
                 <div class="demo-player-header">
                     <div class="demo-player-icon">🎧</div>
                     <div class="demo-player-info">
-                        <h4 id="current-demo-title">Select a demo below</h4>
-                        <p id="current-demo-desc">Choose an industry to hear AI in action</p>
+                        <h4 id="current-demo-title" data-i18n="demo_select">Select a demo below</h4>
+                        <p id="current-demo-desc" data-i18n="demo_desc">Choose an industry to hear AI in action</p>
                     </div>
                 </div>
 
@@ -73,12 +77,13 @@
 
         <!-- CTA Section -->
         <div class="demo-cta">
-            <h3>Ready to hear your own AI receptionist?</h3>
-            <p>Book a 1-week free pilot and we'll set up a custom demo for your business.</p>
-            <a href="book.html" class="cta-btn">Book Your Free Pilot</a>
+            <h3 data-i18n="demo_cta_title">Ready to hear your own AI receptionist?</h3>
+            <p data-i18n="demo_cta_desc">Book a 1-week free pilot and we'll set up a custom demo for your business.</p>
+            <a href="book.html" class="cta-btn" data-i18n="demo_cta_btn">Book Your Free Pilot</a>
         </div>
     </main>
 
+    <script src="translations.js"></script>
     <script>
         // Demo data - single source of truth
         const demos = {

@@ -1,8 +1,17 @@
-// Highlight nav link on scroll
-const sections = document.querySelectorAll("section");
-const navLinkElements = document.querySelectorAll(".nav-links a");
+// Throttled scroll handler for better performance
+let ticking = false;
 
 window.addEventListener("scroll", () => {
+    if (!ticking) {
+        window.requestAnimationFrame(() => {
+            updateNavHighlight();
+            ticking = false;
+        });
+        ticking = true;
+    }
+});
+
+function updateNavHighlight() {
     let current = "";
 
     sections.forEach(section => {
@@ -18,7 +27,11 @@ window.addEventListener("scroll", () => {
             link.classList.add("active");
         }
     });
-});
+}
+
+// Highlight nav link on scroll
+const sections = document.querySelectorAll("section");
+const navLinkElements = document.querySelectorAll(".nav-links a");
 
 // Mobile menu functionality
 const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
@@ -27,6 +40,7 @@ const navLinksContainer = document.querySelector('.nav-links');
 mobileMenuBtn.addEventListener('click', () => {
     mobileMenuBtn.classList.toggle('active');
     navLinksContainer.classList.toggle('active');
+    document.body.classList.toggle('menu-open');
 });
 
 // Close mobile menu when clicking on a link
@@ -34,6 +48,7 @@ navLinksContainer.addEventListener('click', (e) => {
     if (e.target.tagName === 'A') {
         mobileMenuBtn.classList.remove('active');
         navLinksContainer.classList.remove('active');
+        document.body.classList.remove('menu-open');
     }
 });
 
