@@ -109,7 +109,7 @@ const translations = {
         trust_card1_title: 'GDPR Compliant',
         trust_card1_desc: 'All data stored on EU servers (Stockholm region). Full data processing agreements available. Right to deletion automated. We\'re your personuppgiftsbiträde (data processor).',
         trust_card2_title: 'Bank-Level Encryption',
-        trust_card2_desc: 'TLS 1.3 for data in transit. AES-256 encryption at rest. Call recordings stored securely with access logging.',
+        trust_card2_desc: 'TLS 1.3 for data in transit. AES-256 encryption at rest. Call retellings stored securely with access logging.',
         trust_card3_title: 'Multilingual Support',
         trust_card3_desc: 'Perfect Swedish (svenska) and English out of the box. Additional languages available on request. Natural accent, not robotic text-to-speech.',
         trust_card4_title: '99.9% Uptime SLA',
@@ -281,7 +281,7 @@ const translations = {
         trust_card1_title: 'GDPR Compliant',
         trust_card1_desc: 'All data lagrad på EU-servrar (Stockholm-region). Fulla databehandlingsavtal tillgängliga. Raderingsrätt automatiserad. Vi är ditt personuppgiftsbiträde.',
         trust_card2_title: 'Banknivå Kryptering',
-        trust_card2_desc: 'TLS 1.3 för data i transit. AES-256 kryptering i vila. Samtalsinspelningar lagrade säkert med åtkomstloggning.',
+        trust_card2_desc: 'TLS 1.3 för data i transit. AES-256 kryptering i vila. Samtalsåterställningar lagras säkert med åtkomstloggning.',
         trust_card3_title: 'Flerspråkigt Stöd',
         trust_card3_desc: 'Perfekt svenska och engelska från start. Fler språk tillgängliga på begäran. Naturlig accent, inte robotisk text-till-tal.',
         trust_card4_title: '99,9% Drifttid SLA',
@@ -415,7 +415,7 @@ function updateLangSwitcher(lang) {
     switchers.forEach(switcher => {
         const flag = switcher.querySelector('.lang-flag');
         const text = switcher.querySelector('.lang-text');
-        
+
         if (flag && text) {
             if (lang === 'sv') {
                 flag.textContent = '🇸🇪';
