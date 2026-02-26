@@ -6,6 +6,103 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book a Free Call - Kyanite AI</title>
     <link rel="stylesheet" href="styles.css?v=2">
+
+    <!-- Schema.org JSON-LD for LLM Discovery -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "WebPage",
+                "@id": "https://kyaniteagency.com/book.html#webpage",
+                "url": "https://kyaniteagency.com/book.html",
+                "name": "Book a Free Call - Kyanite AI",
+                "isPartOf": {
+                    "@id": "https://kyaniteagency.com/#website"
+                },
+                "about": {
+                    "@id": "https://kyaniteagency.com/#organization"
+                },
+                "description": "Book a free consultation call with Kyanite AI to discuss your AI automation needs. No commitment, no setup fee.",
+                "inLanguage": "en",
+                "dateModified": "2026-02-26"
+            },
+            {
+                "@type": "Service",
+                "serviceType": "Free Consultation Call",
+                "provider": {
+                    "@id": "https://kyaniteagency.com/#organization"
+                },
+                "name": "Free AI Automation Consultation",
+                "description": "Book a no-obligation consultation call to discuss how Kyanite AI can transform your business operations with 24/7 voice automation.",
+                "offers": {
+                    "@type": "Offer",
+                    "price": "0",
+                    "priceCurrency": "SEK",
+                    "availability": "https://schema.org/InStock",
+                    "areaServed": "SE",
+                    "eligibleTransactionVolume": {
+                        "@type": "PriceSpecification",
+                        "priceCurrency": "SEK",
+                        "minPrice": "500",
+                        "maxPrice": "5000+"
+                    }
+                },
+                "hasOfferCatalog": {
+                    "@type": "OfferCatalog",
+                    "name": "AI Automation Services",
+                    "itemListElement": [
+                        {
+                            "@type": "Offer",
+                            "itemOffered": {
+                                "@type": "Service",
+                                "name": "Free 1-Week Pilot",
+                                "description": "Try our AI receptionist for 7 days with no upfront cost or commitment"
+                            }
+                        },
+                        {
+                            "@type": "Offer",
+                            "itemOffered": {
+                                "@type": "Service",
+                                "name": "Custom AI Solutions",
+                                "description": "Tailored AI automation for your specific business needs"
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "@type": "FAQPage",
+                "mainEntity": [
+                    {
+                        "@type": "Question",
+                        "name": "How do I book a free pilot with Kyanite?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Simply fill out the booking form with your name, email, company, and budget range. We'll respond within 2 hours during business days to schedule your free 1-week pilot."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "What budget ranges does Kyanite serve?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "We work with businesses across various budget ranges, from $500 to $5,000+. Contact us to discuss a solution that fits your specific needs and budget."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Is there any commitment for the free pilot?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "No commitment whatsoever. The 1-week pilot is completely free with no setup fee. After 7 days, you decide if you want to continue with our service."
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+    </script>
 </head>
 
 <body>

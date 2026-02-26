@@ -12,6 +12,233 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Lato&display=swap" rel="stylesheet" />
     <link rel="icon" type="image/svg" href="kyanite-crystal.svg">
+
+    <!-- Schema.org JSON-LD for LLM Discovery -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "Organization",
+                "@id": "https://kyaniteagency.com/#organization",
+                "name": "Kyanite AI Automation Agency",
+                "alternateName": "Kyanite",
+                "url": "https://kyaniteagency.com",
+                "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://kyaniteagency.com/kyanite-header-with-logo.svg",
+                    "width": 200,
+                    "height": 60
+                },
+                "description": "AI-powered voice receptionists for Swedish businesses. Handle calls, book meetings, and update databases in real-time with 24/7 availability.",
+                "foundingDate": "2024",
+                "founders": [
+                    {
+                        "@type": "Person",
+                        "name": "Stepan",
+                        "jobTitle": "Co-Founder",
+                        "description": "Bridging the gap between Economics and Generative AI to help Swedish businesses scale through automation."
+                    }
+                ],
+                "contactPoint": {
+                    "@type": "ContactPoint",
+                    "telephone": "+46-76-329-28-61",
+                    "contactType": "customer service",
+                    "availableLanguage": ["Swedish", "English"],
+                    "areaServed": "SE",
+                    "contactOption": "TollFree"
+                },
+                "email": "kyaniteautomations@gmail.com",
+                "address": {
+                    "@type": "PostalAddress",
+                    "addressLocality": "Stockholm",
+                    "addressCountry": "SE"
+                },
+                "areaServed": {
+                    "@type": "Country",
+                    "name": "Sweden"
+                },
+                "industry": "AI Automation and Voice Assistant Services",
+                "knowsAbout": [
+                    "AI Voice Assistants",
+                    "Call Center Automation",
+                    "CRM Integration",
+                    "Swedish Language AI",
+                    "GDPR Compliance",
+                    "Real Estate Technology",
+                    "Healthcare Automation",
+                    "Logistics Solutions"
+                ]
+            },
+            {
+                "@type": "LocalBusiness",
+                "parentOrganization": {
+                    "@id": "https://kyaniteagency.com/#organization"
+                },
+                "name": "Kyanite AI Automation",
+                "image": "https://kyaniteagency.com/kyanite.png",
+                "telephone": "+46-76-329-28-61",
+                "email": "kyaniteautomations@gmail.com",
+                "address": {
+                    "@type": "PostalAddress",
+                    "addressLocality": "Stockholm",
+                    "addressCountry": "SE"
+                },
+                "geo": {
+                    "@type": "GeoCoordinates",
+                    "latitude": 59.3293,
+                    "longitude": 18.0686
+                },
+                "url": "https://kyaniteagency.com",
+                "priceRange": "$$",
+                "openingHoursSpecification": {
+                    "@type": "OpeningHoursSpecification",
+                    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                    "opens": "09:00",
+                    "closes": "17:00"
+                },
+                "makesOffer": [
+                    {
+                        "@type": "Offer",
+                        "itemOffered": {
+                            "@type": "Service",
+                            "name": "AI Voice Receptionist",
+                            "description": "24/7 AI-powered voice assistant that handles calls, books meetings, and updates databases in real-time.",
+                            "serviceType": "Voice Assistant Service",
+                            "provider": {
+                                "@id": "https://kyaniteagency.com/#organization"
+                            },
+                            "areaServed": "SE",
+                            "availableLanguage": ["Swedish", "English"],
+                            "hasOfferCatalog": {
+                                "@type": "OfferCatalog",
+                                "name": "AI Automation Services",
+                                "itemListElement": [
+                                    {
+                                        "@type": "Offer",
+                                        "itemOffered": {
+                                            "@type": "Service",
+                                            "name": "Free 1-Week Pilot",
+                                            "description": "Try our AI receptionist for 7 days with no upfront cost or commitment."
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                ]
+            },
+            {
+                "@type": "Service",
+                "serviceType": "AI Call Center Automation",
+                "provider": {
+                    "@id": "https://kyaniteagency.com/#organization"
+                },
+                "name": "AI Voice Receptionist for Swedish Businesses",
+                "description": "Replace traditional call centers with intelligent AI that handles customer calls 24/7 in perfect Swedish and English.",
+                "serviceOutput": "Reduced operational costs by 70%, 24/7 availability, zero missed calls",
+                "hasCredential": {
+                    "@type": "EducationalOccupationalCredential",
+                    "credentialCategory": "GDPR Compliant",
+                    "description": "Full GDPR compliance with EU data storage in Stockholm region"
+                },
+                "audience": {
+                    "@type": "BusinessAudience",
+                    "businessType": ["RealEstateAgent", "Dentist", "MedicalBusiness", "LogisticsService"]
+                },
+                "offers": {
+                    "@type": "Offer",
+                    "priceCurrency": "SEK",
+                    "price": "Contact for pricing",
+                    "availability": "https://schema.org/InStock"
+                }
+            },
+            {
+                "@type": "FAQPage",
+                "mainEntity": [
+                    {
+                        "@type": "Question",
+                        "name": "How much can Swedish businesses save with Kyanite AI?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Businesses can reduce operational costs by up to 70% compared to traditional receptionists. A full-time receptionist in Sweden costs 450,000–600,000 SEK/year, while our AI solution provides 24/7 coverage at a fraction of the cost."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Does Kyanite support Swedish language?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Yes, our AI speaks native Swedish and English with perfect accent. It's not robotic text-to-speech—your customers will have natural conversations and receive instant follow-ups in their preferred language."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Is there a free trial available?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Yes, we offer a free 1-week pilot with no upfront cost and no commitment. You get 7 days of your calls handled by AI, and then you decide if it's worth keeping."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Is Kyanite GDPR compliant?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "Absolutely. All data is stored on EU servers in the Stockholm region. We provide full data processing agreements, automated right to deletion, and act as your personuppgiftsbiträde (data processor) under Swedish law."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "What integrations does Kyanite support?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "We offer native integrations with Visma, Fortnox, and Google Calendar. We also provide a REST API for custom CRM connections and two-way sync with your existing database systems."
+                        }
+                    },
+                    {
+                        "@type": "Question",
+                        "name": "Which industries does Kyanite serve?",
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": "We specialize in Real Estate agencies, Medical Clinics & Dental practices, and Logistics & Delivery companies. We also build custom solutions for other industries upon request."
+                        }
+                    }
+                ]
+            },
+            {
+                "@type": "WebSite",
+                "@id": "https://kyaniteagency.com/#website",
+                "url": "https://kyaniteagency.com",
+                "name": "Kyanite AI Automation Agency",
+                "description": "Never Miss a Lead in Sweden Again. AI-powered voice receptionists for Swedish businesses.",
+                "publisher": {
+                    "@id": "https://kyaniteagency.com/#organization"
+                },
+                "inLanguage": ["sv", "en"],
+                "potentialAction": {
+                    "@type": "SearchAction",
+                    "target": "https://kyaniteagency.com/#search",
+                    "query-input": "required name=search_term_string"
+                }
+            },
+            {
+                "@type": "WebPage",
+                "@id": "https://kyaniteagency.com/#webpage",
+                "url": "https://kyaniteagency.com",
+                "name": "Kyanite AI - Never Miss a Lead in Sweden Again",
+                "isPartOf": {
+                    "@id": "https://kyaniteagency.com/#website"
+                },
+                "about": {
+                    "@id": "https://kyaniteagency.com/#organization"
+                },
+                "description": "An intelligent voice assistant that handles calls, books meetings, and updates your database in real-time. Cut operational costs by 70% while providing instant response to every customer.",
+                "inLanguage": "en"
+            }
+        ]
+    }
+    </script>
 </head>
 
 <body>
