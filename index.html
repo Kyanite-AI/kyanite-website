@@ -140,20 +140,38 @@
                 "name": "AI Voice Receptionist for Swedish Businesses",
                 "description": "Replace traditional call centers with intelligent AI that handles customer calls 24/7 in perfect Swedish and English.",
                 "serviceOutput": "Reduced operational costs by 70%, 24/7 availability, zero missed calls",
+                "image": "https://kyaniteagency.com/kyanite-crystal.svg",
                 "hasCredential": {
                     "@type": "EducationalOccupationalCredential",
                     "credentialCategory": "GDPR Compliant",
                     "description": "Full GDPR compliance with EU data storage in Stockholm region"
                 },
                 "audience": {
-                    "@type": "BusinessAudience",
-                    "businessType": ["RealEstateAgent", "Dentist", "MedicalBusiness", "LogisticsService"]
+                    "@type": "Audience",
+                    "audienceType": "Businesses",
+                    "geographicArea": {
+                        "@type": "Country",
+                        "name": "Sweden"
+                    }
                 },
                 "offers": {
                     "@type": "Offer",
-                    "priceCurrency": "SEK",
-                    "price": "Contact for pricing",
-                    "availability": "https://schema.org/InStock"
+                    "priceCurrency": "EUR",
+                    "price": "100.00",
+                    "priceSpecification": {
+                        "@type": "PriceSpecification",
+                        "priceCurrency": "EUR",
+                        "minPrice": "100.00",
+                        "maxPrice": "1000.00",
+                        "priceType": "https://schema.org/StartingAtPrice"
+                    },
+                    "availability": "https://schema.org/InStock",
+                    "hasMerchantReturnPolicy": {
+                        "@type": "MerchantReturnPolicy",
+                        "applicableCountry": "SE",
+                        "returnPolicyCategory": "https://schema.org/MerchantReturnUnspecified",
+                        "description": "Free 1-week trial period with no payment required. Contract signed after trial."
+                    }
                 }
             },
             {

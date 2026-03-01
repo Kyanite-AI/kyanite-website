@@ -53,16 +53,32 @@
                 "@type": "Product",
                 "name": "Kyanite AI Voice Receptionist Demo",
                 "description": "Experience how our 24/7 AI receptionist handles real customer calls in Swedish and English with natural conversation flow.",
+                "image": "https://kyaniteagency.com/kyanite-crystal.svg",
                 "brand": {
-                    "@id": "https://kyaniteagency.com/#organization"
+                    "@type": "Brand",
+                    "name": "Kyanite AI Agency",
+                    "logo": "https://kyaniteagency.com/kyanite-crystal.svg"
                 },
                 "category": "AI Automation Software",
                 "offers": {
                     "@type": "Offer",
-                    "priceCurrency": "SEK",
-                    "price": "Contact for pricing",
+                    "priceCurrency": "EUR",
+                    "price": "100.00",
+                    "priceSpecification": {
+                        "@type": "PriceSpecification",
+                        "priceCurrency": "EUR",
+                        "minPrice": "100.00",
+                        "maxPrice": "1000.00",
+                        "priceType": "https://schema.org/StartingAtPrice"
+                    },
                     "availability": "https://schema.org/InStock",
-                    "areaServed": "SE"
+                    "areaServed": "SE",
+                    "hasMerchantReturnPolicy": {
+                        "@type": "MerchantReturnPolicy",
+                        "applicableCountry": "SE",
+                        "returnPolicyCategory": "https://schema.org/MerchantReturnUnspecified",
+                        "description": "Free 1-week trial period with no payment required. Contract signed after trial."
+                    }
                 },
                 "featureList": [
                     "24/7 Availability",
@@ -72,8 +88,12 @@
                     "CRM Integration"
                 ],
                 "audience": {
-                    "@type": "BusinessAudience",
-                    "businessType": ["RealEstateAgent", "Dentist", "MedicalBusiness", "LogisticsService"]
+                    "@type": "Audience",
+                    "audienceType": "Businesses",
+                    "geographicArea": {
+                        "@type": "Country",
+                        "name": "Sweden"
+                    }
                 }
             },
             {
