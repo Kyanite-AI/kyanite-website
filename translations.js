@@ -6,13 +6,14 @@ const translations = {
         nav_about: 'About Us',
         nav_why: 'Why Us',
         nav_services: 'Services',
+        nav_faq: 'FAQ',
         nav_contact: 'Contact Us',
 
         // Hero Section
         hero_claim: 'Mary, Meet Your New 24/7 AI Receptionist',
         hero_slogan: 'Never Miss a Lead in Sweden Again',
         hero_subheadline: 'An intelligent voice assistant that handles calls, books meetings, and updates your database in real-time. Cut operational costs by 70% while providing instant response to every customer.',
-        hero_trust: 'Trusted by Swedish businesses in Real Estate, Healthcare & Logistics.',
+        hero_trust: 'Built specifically for Swedish businesses in Real Estate, Healthcare & Logistics.',
         hero_cta_demo: 'Listen to Demo',
         hero_cta_pilot: 'Book a 1-Week Free Pilot',
         see_problem: 'See the Problem We Solve',
@@ -145,10 +146,32 @@ const translations = {
         footer_problem: 'The Problem',
         footer_services: 'Admin Dashboard',
         footer_industries: 'Industries',
+        footer_faq: 'FAQ',
         footer_trust: 'Security',
         footer_contact: 'Contact',
         footer_legal: 'GDPR Compliant | Personuppgiftsbiträde | Data Processor Agreement Available',
         footer_copyright: '© 2025 Kyanite AI Automation Agency. All rights reserved.',
+        footer_cta: 'Book Your Free Pilot',
+
+        // FAQ Section
+        faq_title: 'FAQ',
+        faq_q1: 'What if the AI doesn\'t understand the caller?',
+        faq_a1: 'It seamlessly transfers to a human operator or takes a detailed message for follow-up.',
+        faq_q2: 'How fast can I get started?',
+        faq_a2: 'Most pilots are live within 48 hours after our initial call.',
+        faq_q3: 'Is my data GDPR compliant?',
+        faq_a3: 'Yes. All data is processed on EU servers with full GDPR compliance. DPA available on request.',
+        faq_q4: 'Can I cancel anytime?',
+        faq_a4: 'Yes. No lock-in contracts. Cancel with 7 days notice.',
+
+        // How It Works Section
+        how_it_works_title: 'Get started in 3 steps',
+        how_it_works_step1_title: 'Book a pilot',
+        how_it_works_step1_desc: '15-min call to understand your workflow',
+        how_it_works_step2_title: 'We configure',
+        how_it_works_step2_desc: 'AI adapted to your business logic (48h)',
+        how_it_works_step3_title: 'Go live',
+        how_it_works_step3_desc: 'Start answering calls instantly',
 
         // Demo page
         demo_title: 'Listen to AI Call Demos',
@@ -162,10 +185,11 @@ const translations = {
 
         // Book page
         book_title: 'Book a Free Call',
-        book_name: 'Your Name',
-        book_email: 'Your Email',
-        book_company: 'Company Name',
-        book_service: 'Select Service',
+        book_name: 'Your Name *',
+        book_email: 'Work Email *',
+        book_phone: 'Phone (optional)',
+        book_company: 'Company Name *',
+        book_industry: 'Select Industry *',
         book_budget: 'Budget Range',
         book_details: 'Tell us more about your project...',
         book_submit: 'Submit',
@@ -178,13 +202,14 @@ const translations = {
         nav_about: 'Om Oss',
         nav_why: 'Varför Oss',
         nav_services: 'Tjänster',
+        nav_faq: 'FAQ',
         nav_contact: 'Kontakt',
 
         // Hero Section
         hero_claim: 'Mary, Möt Din Nya 24/7 AI-Receptionist',
         hero_slogan: 'Aldrig Missa Ett Lead i Sverige Igen',
         hero_subheadline: 'En intelligent röstassistent som hanterar samtal, bokar möten och uppdaterar din databas i realtid. Sänk driftskostnaderna med 70% samtidigt som varje kund får omedelbar respons.',
-        hero_trust: 'Litad av svenska företag inom Fastigheter, Vård & Logistik.',
+        hero_trust: 'Byggd specifikt för svenska företag inom Fastigheter, Vård & Logistik.',
         hero_cta_demo: 'Lyssna på Demo',
         hero_cta_pilot: 'Boka en 1-Veckas Gratis Pilot',
         see_problem: 'Se Problemet Vi Löser',
@@ -317,10 +342,32 @@ const translations = {
         footer_problem: 'Problemet',
         footer_services: 'Admin Dashboard',
         footer_industries: 'Branscher',
+        footer_faq: 'FAQ',
         footer_trust: 'Säkerhet',
         footer_contact: 'Kontakt',
         footer_legal: 'GDPR Compliant | Personuppgiftsbiträde | Databehandlingsavtal Tillgängligt',
         footer_copyright: '© 2025 Kyanite AI Automation Agency. Alla rättigheter reserverade.',
+        footer_cta: 'Boka Din Gratis Pilot',
+
+        // FAQ Section
+        faq_title: 'Vanliga frågor',
+        faq_q1: 'Vad händer om AI:n inte förstår uppringaren?',
+        faq_a1: 'Den överför sömlöst till en mänsklig operatör eller tar ett detaljerat meddelande för uppföljning.',
+        faq_q2: 'Hur snabbt kan jag komma igång?',
+        faq_a2: 'De flesta piloter är igång inom 48 timmar efter vårt första samtal.',
+        faq_q3: 'Är min data GDPR-compliant?',
+        faq_a3: 'Ja. All data behandlas på EU-servrar med full GDPR-efterlevnad. DPA finns på begäran.',
+        faq_q4: 'Kan jag säga upp när som helst?',
+        faq_a4: 'Ja. Inga bindningstider. Säg upp med 7 dagars varsel.',
+
+        // How It Works Section
+        how_it_works_title: 'Kom igång på 3 steg',
+        how_it_works_step1_title: 'Boka en pilot',
+        how_it_works_step1_desc: '15-minuters samtal för att förstå ditt flöde',
+        how_it_works_step2_title: 'Vi konfigurerar',
+        how_it_works_step2_desc: 'AI anpassad till din affärslogik (48h)',
+        how_it_works_step3_title: 'Starta',
+        how_it_works_step3_desc: 'Börja svara på samtal direkt',
 
         // Demo page
         demo_title: 'Lyssna på AI Samtalsdemor',
@@ -334,10 +381,11 @@ const translations = {
 
         // Book page
         book_title: 'Boka Ett Gratis Samtal',
-        book_name: 'Ditt Namn',
-        book_email: 'Din E-post',
-        book_company: 'Företagsnamn',
-        book_service: 'Välj Tjänst',
+        book_name: 'Ditt Namn *',
+        book_email: 'Arbetsmejl *',
+        book_phone: 'Telefon (valfritt)',
+        book_company: 'Företagsnamn *',
+        book_industry: 'Välj Bransch *',
         book_budget: 'Budget',
         book_details: 'Berätta mer om ditt projekt...',
         book_submit: 'Skicka',

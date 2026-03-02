@@ -13,17 +13,22 @@ window.addEventListener("scroll", () => {
 
 function updateNavHighlight() {
     let current = "";
+    const scrollPos = pageYOffset + 300; // Offset for better detection
 
     sections.forEach(section => {
-        const sectionTop = section.offsetTop - 80;
-        if (pageYOffset >= sectionTop) {
+        const sectionTop = section.offsetTop;
+        const sectionBottom = sectionTop + section.offsetHeight;
+
+        // Find the section that's closest to the top of viewport
+        if (scrollPos >= sectionTop && scrollPos < sectionBottom) {
             current = section.getAttribute("id");
         }
     });
 
     navLinkElements.forEach(link => {
         link.classList.remove("active");
-        if (link.getAttribute("href").includes(current)) {
+        const linkHref = link.getAttribute("href");
+        if (linkHref === "#" + current) {
             link.classList.add("active");
         }
     });
