@@ -1,153 +1,235 @@
-// Throttled scroll handler for better performance
-let ticking = false;
+const header = document.querySelector("[data-header]");
+const nav = document.querySelector("[data-nav]");
+const navToggle = document.querySelector("[data-nav-toggle]");
+const navLinks = document.querySelectorAll("[data-nav] a");
 
-window.addEventListener("scroll", () => {
-    if (!ticking) {
-        window.requestAnimationFrame(() => {
-            updateNavHighlight();
-            ticking = false;
-        });
-        ticking = true;
-    }
-});
+if (header) {
+    const syncHeader = () => {
+        header.classList.toggle("scrolled", window.scrollY > 18);
+    };
 
-function updateNavHighlight() {
-    let current = "";
-    const scrollPos = pageYOffset + 300; // Offset for better detection
+    syncHeader();
+    window.addEventListener("scroll", syncHeader, { passive: true });
+}
 
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        const sectionBottom = sectionTop + section.offsetHeight;
+if (nav && navToggle) {
+    const closeMenu = () => {
+        nav.classList.remove("is-open");
+        navToggle.classList.remove("is-open");
+        document.body.classList.remove("menu-open");
+    };
 
-        // Find the section that's closest to the top of viewport
-        if (scrollPos >= sectionTop && scrollPos < sectionBottom) {
-            current = section.getAttribute("id");
-        }
+    navToggle.addEventListener("click", () => {
+        const willOpen = !nav.classList.contains("is-open");
+        nav.classList.toggle("is-open", willOpen);
+        navToggle.classList.toggle("is-open", willOpen);
+        document.body.classList.toggle("menu-open", willOpen);
     });
 
-    navLinkElements.forEach(link => {
-        link.classList.remove("active");
-        const linkHref = link.getAttribute("href");
-        if (linkHref === "#" + current) {
-            link.classList.add("active");
+    navLinks.forEach(link => {
+        link.addEventListener("click", closeMenu);
+    });
+
+    window.addEventListener("resize", () => {
+        if (window.innerWidth > 1080) {
+            closeMenu();
         }
     });
 }
 
-// Highlight nav link on scroll
-const sections = document.querySelectorAll("section");
-const navLinkElements = document.querySelectorAll(".nav-links a");
-
-// Mobile menu functionality
-const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-const navLinksContainer = document.querySelector('.nav-links');
-
-function toggleMenu() {
-    mobileMenuBtn.classList.toggle('active');
-    navLinksContainer.classList.toggle('active');
-    document.body.classList.toggle('menu-open');
-}
-
-function closeMenu(e) {
-    if (e.target.tagName === 'A') {
-        mobileMenuBtn.classList.remove('active');
-        navLinksContainer.classList.remove('active');
-        document.body.classList.remove('menu-open');
-    }
-}
-
-mobileMenuBtn.addEventListener('click', toggleMenu);
-navLinksContainer.addEventListener('click', closeMenu);
-
-// Service box expansion functionality
-document.addEventListener('DOMContentLoaded', function () {
-    let outsideClickHandler = null;
-
-    // Function to close all service boxes
-    function closeAllBoxes() {
-        const currentServiceBoxes = document.querySelectorAll('.service-box');
-        currentServiceBoxes.forEach(box => {
-            box.classList.remove('expanded');
+const revealItems = document.querySelectorAll(".reveal");
+if (revealItems.length > 0) {
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("in-view");
+                observer.unobserve(entry.target);
+            }
         });
-    }
+    }, { threshold: 0.18, rootMargin: "0px 0px -8% 0px" });
 
-    // Function to check if device is mobile/touch
-    function isMobileDevice() {
-        return window.innerWidth <= 768 ||
-            ('ontouchstart' in window) ||
-            (navigator.maxTouchPoints > 0) ||
-            (navigator.msMaxTouchPoints > 0);
-    }
+    revealItems.forEach(item => observer.observe(item));
+}
 
-    // Add click handlers for mobile devices
-    function setupMobileInteraction() {
-        const serviceBoxes = document.querySelectorAll('.service-box');
+const sectionAnchors = document.querySelectorAll("section[id]");
+if (sectionAnchors.length > 0 && navLinks.length > 0) {
+    const updateActiveNav = () => {
+        const marker = window.scrollY + 180;
+        let current = "";
 
-        // Remove existing outside click handler
-        if (outsideClickHandler) {
-            document.removeEventListener('click', outsideClickHandler);
-            outsideClickHandler = null;
+        sectionAnchors.forEach(section => {
+            if (marker >= section.offsetTop) {
+                current = section.id;
+            }
+        });
+
+        navLinks.forEach(link => {
+            const href = link.getAttribute("href");
+            const isMatch = href && href.startsWith("#") && href.slice(1) === current;
+            link.classList.toggle("is-active", Boolean(isMatch));
+        });
+    };
+
+    updateActiveNav();
+    window.addEventListener("scroll", updateActiveNav, { passive: true });
+}
+
+const audioElement = document.querySelector("[data-audio-element]");
+if (audioElement) {
+    const playButton = document.querySelector("[data-play]");
+    const progressBar = document.querySelector("[data-progress-bar]");
+    const progressFill = document.querySelector("[data-progress]");
+    const currentTime = document.querySelector("[data-current-time]");
+    const totalTime = document.querySelector("[data-total-time]");
+    const title = document.querySelector("[data-demo-title]");
+    const description = document.querySelector("[data-demo-description]");
+    const note = document.querySelector("[data-demo-note]");
+    const durationCapsule = document.querySelector(".demo-player .capsule");
+    const optionButtons = Array.from(document.querySelectorAll("[data-demo-option]"));
+
+    const availableButtons = optionButtons.filter(button => {
+        const src = button.dataset.audio?.trim();
+        const isDisabled = button.dataset.state === "disabled";
+        const isAvailable = Boolean(src) && !isDisabled;
+        button.hidden = !isAvailable;
+        return isAvailable;
+    });
+
+    const formatTime = seconds => {
+        if (!Number.isFinite(seconds)) {
+            return "0:00";
         }
 
-        if (isMobileDevice()) {
-            // Remove any existing event listeners by cloning nodes
-            serviceBoxes.forEach(box => {
-                const newBox = box.cloneNode(true);
-                box.parentNode.replaceChild(newBox, box);
-            });
+        const mins = Math.floor(seconds / 60);
+        const secs = Math.floor(seconds % 60);
+        return `${mins}:${secs.toString().padStart(2, "0")}`;
+    };
 
-            // Re-query the service boxes after cloning
-            const newServiceBoxes = document.querySelectorAll('.service-box');
+    const syncButton = () => {
+        const isPlaying = !audioElement.paused;
+        playButton.setAttribute("aria-pressed", String(isPlaying));
+        playButton.innerHTML = isPlaying
+            ? '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="6" y="4" width="4" height="16"></rect><rect x="14" y="4" width="4" height="16"></rect></svg>'
+            : '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>';
+    };
 
-            newServiceBoxes.forEach(box => {
-                box.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    e.stopPropagation();
+    const loadDemo = button => {
+        const src = button.dataset.audio || "";
+        const demoTitle = button.querySelector("strong")?.textContent || button.dataset.title || "";
+        const demoDescription = button.querySelector("span")?.textContent || button.dataset.description || "";
+        const isDisabled = button.dataset.state === "disabled";
 
-                    const isCurrentlyExpanded = this.classList.contains('expanded');
+        availableButtons.forEach(item => item.classList.remove("is-active"));
+        button.classList.add("is-active");
+        title.textContent = demoTitle;
+        description.textContent = demoDescription;
 
-                    // Close all boxes first
-                    closeAllBoxes();
+        if (isDisabled || !src) {
+            audioElement.pause();
+            audioElement.currentTime = 0;
+            audioElement.src = "";
+            audioElement.load();
+            progressFill.style.width = "0%";
+            currentTime.textContent = "0:00";
+            totalTime.textContent = "--";
+            if (durationCapsule) {
+                durationCapsule.textContent = "--";
+            }
+            note.textContent = button.dataset.note || note.textContent;
+            syncButton();
+            return;
+        }
 
-                    // If this box wasn't expanded, expand it
-                    if (!isCurrentlyExpanded) {
-                        this.classList.add('expanded');
-                    }
-                });
-            });
+        note.textContent = button.dataset.note || note.textContent;
 
-            // Create and store the outside click handler
-            outsideClickHandler = function (e) {
-                if (!e.target.closest('.service-box')) {
-                    closeAllBoxes();
-                }
-            };
+        if (audioElement.getAttribute("src") !== src && audioElement.src !== src) {
+            audioElement.pause();
+            audioElement.currentTime = 0;
+            audioElement.src = src;
+            audioElement.load();
+        }
 
-            // Add the outside click handler
-            document.addEventListener('click', outsideClickHandler);
+        progressFill.style.width = "0%";
+        currentTime.textContent = "0:00";
+        totalTime.textContent = button.dataset.duration || "--";
+        if (durationCapsule) {
+            durationCapsule.textContent = button.dataset.duration || "--";
+        }
+        syncButton();
+    };
 
-            // Add mobile-specific class to body for CSS targeting
-            document.body.classList.add('mobile-device');
+    availableButtons.forEach(button => {
+        button.addEventListener("click", () => loadDemo(button));
+    });
+
+    playButton.addEventListener("click", async () => {
+        if (!audioElement.src) {
+            note.textContent = "Select an available demo to start playback.";
+            return;
+        }
+
+        if (audioElement.paused) {
+            try {
+                await audioElement.play();
+            } catch (error) {
+                console.error(error);
+                note.textContent = "Playback was blocked or the audio could not load. Try pressing play again.";
+            }
         } else {
-            // Remove mobile class for desktop
-            document.body.classList.remove('mobile-device');
-
-            // Remove expanded classes on desktop
-            closeAllBoxes();
+            audioElement.pause();
         }
-    }
 
-    // Initial setup
-    setupMobileInteraction();
-
-    // Debounced resize handler
-    function handleResize() {
-        setupMobileInteraction();
-    }
-
-    let resizeTimer;
-    window.addEventListener('resize', () => {
-        clearTimeout(resizeTimer);
-        resizeTimer = setTimeout(handleResize, 250);
+        syncButton();
     });
-});
+
+    audioElement.addEventListener("timeupdate", () => {
+        const ratio = audioElement.duration ? (audioElement.currentTime / audioElement.duration) * 100 : 0;
+        progressFill.style.width = `${ratio}%`;
+        currentTime.textContent = formatTime(audioElement.currentTime);
+        totalTime.textContent = formatTime(audioElement.duration);
+    });
+
+    audioElement.addEventListener("loadedmetadata", () => {
+        totalTime.textContent = formatTime(audioElement.duration);
+        if (durationCapsule) {
+            durationCapsule.textContent = formatTime(audioElement.duration);
+        }
+    });
+
+    audioElement.addEventListener("pause", syncButton);
+    audioElement.addEventListener("play", syncButton);
+    audioElement.addEventListener("ended", () => {
+        progressFill.style.width = "0%";
+        currentTime.textContent = "0:00";
+        syncButton();
+    });
+
+    audioElement.addEventListener("error", () => {
+        note.textContent = "The audio file could not be loaded.";
+    });
+
+    progressBar.addEventListener("click", event => {
+        if (!audioElement.duration) {
+            return;
+        }
+
+        const rect = progressBar.getBoundingClientRect();
+        const ratio = (event.clientX - rect.left) / rect.width;
+        audioElement.currentTime = Math.max(0, Math.min(audioElement.duration, ratio * audioElement.duration));
+    });
+
+    const firstActive = availableButtons.find(button => button.classList.contains("is-active")) || availableButtons[0];
+    if (firstActive) {
+        loadDemo(firstActive);
+    } else {
+        playButton.hidden = true;
+        progressBar.hidden = true;
+        title.textContent = "No demo available";
+        description.textContent = "Audio demos will appear here once a file is added.";
+        totalTime.textContent = "--";
+        if (durationCapsule) {
+            durationCapsule.textContent = "--";
+        }
+        note.textContent = "No playable audio is currently available.";
+    }
+}

@@ -1,365 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Listen to Demo - Kyanite AI Agency</title>
-    <link rel="stylesheet" href="styles.css?v=2">
+    <title>Listen to Demo | Kyanite AI Agency</title>
+    <meta name="description" content="Listen to how Kyanite handles a live property inquiry and explore how the AI receptionist feels in practice.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css?v=3">
     <link rel="icon" type="image/svg+xml" href="kyanite-crystal.svg?v=2">
     <link rel="shortcut icon" type="image/svg+xml" href="kyanite-crystal.svg?v=2">
     <link rel="apple-touch-icon" href="kyanite-crystal.svg?v=2">
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-DKX409C8V3"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-DKX409C8V3');
-</script>
-
-
-    <!-- Schema.org JSON-LD for LLM Discovery -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@graph": [
-            {
-                "@type": "WebPage",
-                "@id": "https://kyaniteagency.com/demo.html#webpage",
-                "url": "https://kyaniteagency.com/demo.html",
-                "name": "Listen to AI Call Demos - Kyanite AI",
-                "isPartOf": {
-                    "@id": "https://kyaniteagency.com/#website"
-                },
-                "about": {
-                    "@id": "https://kyaniteagency.com/#organization"
-                },
-                "description": "Listen to real AI call demos showing how Kyanite handles customer calls in Swedish and English for Real Estate, Medical, and Logistics industries.",
-                "inLanguage": "en",
-                "dateModified": "2026-02-26"
-            },
-            {
-                "@type": "MediaObject",
-                "contentType": "audio/mpeg",
-                "name": "Kyanite AI Call Demos",
-                "description": "Audio demonstrations of AI voice receptionist handling real business calls",
-                "contentUrl": "https://kyaniteagency.com/demos/real-estate-call-demo.mp3",
-                "embedUrl": "https://kyaniteagency.com/demo.html",
-                "duration": "PT2M21S",
-                "inLanguage": ["sv", "en"],
-                "associatedMedia": [
-                    {
-                        "@type": "AudioObject",
-                        "name": "Real Estate Inquiry Demo",
-                        "description": "AI handles property viewing booking and budget qualification",
-                        "duration": "PT2M21S",
-                        "inLanguage": "sv"
-                    }
-                ]
-            },
-            {
-                "@type": "Product",
-                "name": "Kyanite AI Voice Receptionist Demo",
-                "description": "Experience how our 24/7 AI receptionist handles real customer calls in Swedish and English with natural conversation flow.",
-                "image": "https://kyaniteagency.com/kyanite-crystal.svg",
-                "brand": {
-                    "@type": "Brand",
-                    "name": "Kyanite AI Agency",
-                    "logo": "https://kyaniteagency.com/kyanite-crystal.svg"
-                },
-                "category": "AI Automation Software",
-                "offers": {
-                    "@type": "Offer",
-                    "priceCurrency": "EUR",
-                    "price": "100.00",
-                    "priceSpecification": {
-                        "@type": "PriceSpecification",
-                        "priceCurrency": "EUR",
-                        "minPrice": "100.00",
-                        "maxPrice": "1000.00",
-                        "priceType": "https://schema.org/StartingAtPrice"
-                    },
-                    "availability": "https://schema.org/InStock",
-                    "areaServed": "SE",
-                    "hasMerchantReturnPolicy": {
-                        "@type": "MerchantReturnPolicy",
-                        "applicableCountry": "SE",
-                        "returnPolicyCategory": "https://schema.org/MerchantReturnUnspecified",
-                        "description": "Free 1-week trial period with no payment required. Contract signed after trial."
-                    }
-                },
-                "featureList": [
-                    "24/7 Availability",
-                    "Native Swedish & English",
-                    "70% Cost Reduction",
-                    "GDPR Compliant",
-                    "CRM Integration"
-                ],
-                "audience": {
-                    "@type": "Audience",
-                    "audienceType": "Businesses",
-                    "geographicArea": {
-                        "@type": "Country",
-                        "name": "Sweden"
-                    }
-                }
-            },
-            {
-                "@type": "FAQPage",
-                "mainEntity": [
-                    {
-                        "@type": "Question",
-                        "name": "What do the Kyanite AI demos sound like?",
-                        "acceptedAnswer": {
-                            "@type": "Answer",
-                            "text": "Our demos feature natural-sounding AI conversations in Swedish and English. The AI handles real business scenarios like property viewings, medical appointments, and logistics tracking with perfect accent and instant follow-ups."
-                        }
-                    },
-                    {
-                        "@type": "Question",
-                        "name": "Can I try Kyanite AI before purchasing?",
-                        "acceptedAnswer": {
-                            "@type": "Answer",
-                            "text": "Yes! We offer a free 1-week pilot with no upfront cost or commitment. Book your pilot and we'll set up a custom demo tailored to your specific business needs."
-                        }
-                    }
-                ]
-            }
-        ]
-    }
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DKX409C8V3"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag("js", new Date());
+        gtag("config", "G-DKX409C8V3");
     </script>
 </head>
-
 <body>
-    <!-- Background layers -->
-    <div class="gradient-background"></div>
-    <div class="dotted-grid"></div>
-    <div class="blur-shapes">
-        <div class="blur-shape shape-1"></div>
-        <div class="blur-shape shape-2"></div>
-        <div class="blur-shape shape-3"></div>
-        <div class="blur-shape shape-4"></div>
-        <div class="blur-shape shape-5"></div>
-        <div class="blur-shape shape-6"></div>
+    <div class="site-bg">
+        <div class="site-grid"></div>
     </div>
 
-    <!-- Back button -->
-    <header class="back-header">
-        <a href="index.html" class="back-btn" data-i18n="demo_back">← Home</a>
-        <button class="lang-switcher" id="lang-switcher" aria-label="Switch language" onclick="toggleLanguage()">
-            <span class="lang-flag">🇬🇧</span>
-            <span class="lang-text">EN</span>
-        </button>
-    </header>
+    <header class="site-header" data-header>
+        <div class="container">
+            <a href="index.html" class="brand-lockup" aria-label="Kyanite home">
+                <img src="kyanite-crystal.svg" alt="" class="brand-mark">
+                <span class="brand-wording">
+                    <span class="brand-name">Kyanite</span>
+                    <span class="brand-meta">AI voice operations</span>
+                </span>
+            </a>
 
-    <main class="demo-container">
-        <h1 class="section-header" data-i18n="demo_title">Listen to AI Call Demos</h1>
-        <p class="demo-intro" data-i18n="demo_intro">Hear how our AI receptionist handles real business calls in Swedish and English.</p>
-
-        <!-- Demo Player Section -->
-        <div class="demo-player-wrapper">
-            <div class="demo-player">
-                <div class="demo-player-header">
-                    <div class="demo-player-icon">🎧</div>
-                    <div class="demo-player-info">
-                        <h4 id="current-demo-title" data-i18n="demo_select">Select a demo below</h4>
-                        <p id="current-demo-desc" data-i18n="demo_desc">Choose an industry to hear AI in action</p>
-                    </div>
-                </div>
-
-                <div class="audio-player">
-                    <div class="progress-bar">
-                        <div class="progress" id="progress"></div>
-                    </div>
-                    <div class="player-controls">
-                        <button class="control-btn" id="play-btn" onclick="togglePlay()">
-                            <svg class="play-icon" viewBox="0 0 24 24" fill="currentColor">
-                                <polygon points="5 3 19 12 5 21 5 3"></polygon>
-                            </svg>
-                            <svg class="pause-icon" viewBox="0 0 24 24" fill="currentColor" style="display: none;">
-                                <rect x="6" y="4" width="4" height="16"></rect>
-                                <rect x="14" Y="4" width="4" height="16"></rect>
-                            </svg>
-                        </button>
-                        <span class="time-display" id="time-display">0:00 / 0:00</span>
-                    </div>
-                </div>
-
-                <audio id="audio-element">
-                    <source src="" type="audio/mpeg">
-                    Your browser does not support the audio element.
-                </audio>
+            <div class="nav-shell">
+                <nav class="site-nav" data-nav>
+                    <a href="index.html" data-i18n="nav_home">Home</a>
+                    <a href="index.html#industries" data-i18n="nav_industries">Industries</a>
+                    <a href="index.html#platform" data-i18n="nav_platform">Platform</a>
+                    <a href="book.html" data-i18n="nav_book">Book pilot</a>
+                </nav>
+                <button class="lang-switcher" type="button" aria-label="Switch language" onclick="toggleLanguage()">
+                    <span class="lang-flag">🇬🇧</span>
+                    <span class="lang-text">EN</span>
+                </button>
+                <button class="mobile-toggle" type="button" aria-label="Toggle navigation" data-nav-toggle>
+                    <span></span>
+                </button>
             </div>
         </div>
+    </header>
 
-        <!-- Demo Selection Cards -->
-        <div class="demo-grid" id="demo-grid">
-            <!-- Generated by JavaScript -->
-        </div>
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="section-header reveal">
+                    <div class="section-kicker" data-i18n="demo_eyebrow">Audio demo</div>
+                    <h1 class="section-title" data-i18n="demo_title">Hear how the receptionist sounds when a live lead comes in.</h1>
+                    <p class="section-lead" data-i18n="demo_lead">The best proof is the rhythm of the conversation: calm greeting, relevant questions, and a clear next action.</p>
+                </div>
 
-        <!-- CTA Section -->
-        <div class="demo-cta">
-            <h3 data-i18n="demo_cta_title">Ready to hear your own AI receptionist?</h3>
-            <p data-i18n="demo_cta_desc">Book a 1-week free pilot and we'll set up a custom demo for your business.</p>
-            <a href="book.html" class="cta-btn" data-i18n="demo_cta_btn">Book Your Free Pilot</a>
-        </div>
+                <div class="demo-shell">
+                    <div class="demo-layout">
+                        <div class="demo-copy reveal">
+                            <div class="status-pill" data-i18n="demo_live_badge">Real estate demo</div>
+                            <p class="panel-copy">The live example here is an AI retelling of a Swedish property inquiry. Additional industry-specific scenarios are prepared with you during the pilot so they reflect your exact workflow.</p>
+                            <div class="hero-actions">
+                                <a href="book.html" class="button button-primary" data-i18n="demo_primary">Book your own pilot</a>
+                                <a href="index.html" class="button button-secondary" data-i18n="demo_secondary">Back to homepage</a>
+                            </div>
+                            <div class="demo-options">
+                                <button class="demo-option is-active" type="button" data-demo-option data-title="Swedish property inquiry" data-description="A buyer calls about a listing and gets qualified before the agent steps in." data-audio="demos/real-estate-call-demo.mp3" data-duration="2:21" data-note="AI retelling of a Swedish property inquiry.">
+                                    <strong data-i18n="demo_option_1_title">Buyer qualification</strong>
+                                    <span data-i18n="demo_option_1_desc">Budget, location, and viewing intent are captured live.</span>
+                                </button>
+                                <button class="demo-option is-disabled" type="button" data-demo-option data-state="disabled" data-title="Clinic intake scenario" data-description="Custom scenario prepared live during the pilot meeting." data-note="This scenario is prepared specifically for your clinic workflow during the pilot call.">
+                                    <strong data-i18n="demo_option_2_title">Clinic intake</strong>
+                                    <span data-i18n="demo_option_2_desc">Custom scenario prepared live during the pilot meeting.</span>
+                                </button>
+                                <button class="demo-option is-disabled" type="button" data-demo-option data-state="disabled" data-title="Delivery exception scenario" data-description="Custom scenario prepared live during the pilot meeting." data-note="This scenario is prepared specifically for your logistics workflow during the pilot call.">
+                                    <strong data-i18n="demo_option_3_title">Delivery exception</strong>
+                                    <span data-i18n="demo_option_3_desc">Custom scenario prepared live during the pilot meeting.</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="demo-player reveal">
+                            <div class="demo-player-top">
+                                <span class="console-label"><span class="signal-dot"></span> live playback</span>
+                                <span class="capsule">2:21</span>
+                            </div>
+                            <div>
+                                <h2 class="panel-title" data-demo-title data-i18n="demo_player_title">Swedish property inquiry</h2>
+                                <p class="panel-copy" data-demo-description data-i18n="demo_player_desc">A buyer calls about a listing and gets qualified before the agent steps in.</p>
+                            </div>
+                            <div class="demo-wave">
+                                <div class="demo-orb"></div>
+                                <div class="wave-bars" aria-hidden="true">
+                                    <span style="height: 28%"></span>
+                                    <span style="height: 56%"></span>
+                                    <span style="height: 38%"></span>
+                                    <span style="height: 72%"></span>
+                                    <span style="height: 42%"></span>
+                                    <span style="height: 88%"></span>
+                                    <span style="height: 36%"></span>
+                                    <span style="height: 60%"></span>
+                                    <span style="height: 34%"></span>
+                                    <span style="height: 76%"></span>
+                                    <span style="height: 44%"></span>
+                                    <span style="height: 58%"></span>
+                                </div>
+                            </div>
+                            <div class="player-controls">
+                                <button class="play-button" type="button" aria-label="Play demo" data-play></button>
+                                <div class="progress-shell">
+                                    <div class="progress-bar" data-progress-bar>
+                                        <span data-progress></span>
+                                    </div>
+                                    <div class="time-row">
+                                        <span data-current-time>0:00</span>
+                                        <span data-total-time>2:21</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="demo-note" data-demo-note data-i18n="demo_note">AI retelling of a Swedish property inquiry.</p>
+                            <audio data-audio-element preload="metadata"></audio>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <script src="translations.js"></script>
-    <script>
-        // Demo data - single source of truth
-        const demos = {
-            'real-estate': {
-                title: 'Real Estate Inquiry',
-                desc: 'AI handles property viewing booking and budget qualification',
-                audio: 'demos/real-estate-call-demo.mp3',
-                duration: '2:21',
-                language: 'Swedish',
-                flag: '🇸🇪',
-                icon: '🏢'
-            },
-            // 'medical': {
-            //     title: 'Medical Clinic Booking',
-            //     desc: 'Patient schedules appointment and asks about opening hours',
-            //     audio: 'demos/medical-demo.mp3',
-            //     duration: '1:45',
-            //     language: 'English',
-            //     flag: '🇬🇧',
-            //     icon: '🏥'
-            // },
-            // 'logistics': {
-            //     title: 'Logistics Tracking',
-            //     desc: 'Customer checks delivery status and reschedules shipment',
-            //     audio: 'demos/logistics-demo.mp3',
-            //     duration: '1:58',
-            //     language: 'Swedish',
-            //     flag: '🇸🇪',
-            //     icon: '🚚'
-            // },
-            // 'general': {
-            //     title: 'General Business Inquiry',
-            //     desc: 'AI answers FAQs and captures lead information',
-            //     audio: 'demos/general-demo.mp3',
-            //     duration: '2:30',
-            //     language: 'English',
-            //     flag: '🇬🇧',
-            //     icon: '💼'
-            // }
-        };
-
-        // Generate demo cards from data
-        function renderDemoCards() {
-            const grid = document.getElementById('demo-grid');
-            grid.innerHTML = Object.entries(demos).map(([key, demo]) => `
-                <div class="demo-card" onclick="loadDemo('${key}')">
-                    <div class="demo-card-icon">${demo.icon}</div>
-                    <h4>${demo.title}</h4>
-                    <p>${demo.desc}</p>
-                    <div class="demo-meta">
-                        <span class="demo-duration">⏱ ${demo.duration}</span>
-                        <span class="demo-language">${demo.flag} ${demo.language}</span>
-                    </div>
-                </div>
-            `).join('');
-        }
-
-        // Render cards on page load
-        renderDemoCards();
-
-        let currentDemo = null;
-        let isPlaying = false;
-        const audio = document.getElementById('audio-element');
-        const playBtn = document.getElementById('play-btn');
-        const progress = document.getElementById('progress');
-        const timeDisplay = document.getElementById('time-display');
-
-        function loadDemo(demoKey) {
-            const demo = demos[demoKey];
-            currentDemo = demoKey;
-
-            // Update player info
-            document.getElementById('current-demo-title').textContent = demo.title;
-            document.getElementById('current-demo-desc').textContent = demo.desc;
-
-            // Load audio
-            audio.src = demo.audio;
-            audio.load();
-
-            // Reset player
-            isPlaying = false;
-            updatePlayButton();
-            progress.style.width = '0%';
-            timeDisplay.textContent = '0:00 / ' + demo.duration;
-
-            // Scroll to player
-            document.querySelector('.demo-player-wrapper').scrollIntoView({
-                behavior: 'smooth',
-                block: 'center'
-            });
-        }
-
-        function togglePlay() {
-            if (!currentDemo) {
-                alert('Please select a demo first');
-                return;
-            }
-
-            if (isPlaying) {
-                audio.pause();
-            } else {
-                audio.play();
-            }
-            isPlaying = !isPlaying;
-            updatePlayButton();
-        }
-
-        function updatePlayButton() {
-            const playIcon = playBtn.querySelector('.play-icon');
-            const pauseIcon = playBtn.querySelector('.pause-icon');
-            if (isPlaying) {
-                playIcon.style.display = 'none';
-                pauseIcon.style.display = 'block';
-            } else {
-                playIcon.style.display = 'block';
-                pauseIcon.style.display = 'none';
-            }
-        }
-
-        // Update progress bar
-        audio.addEventListener('timeupdate', () => {
-            const percent = (audio.currentTime / audio.duration) * 100;
-            progress.style.width = percent + '%';
-
-            // Update time display
-            const current = formatTime(audio.currentTime);
-            const total = formatTime(audio.duration);
-            timeDisplay.textContent = current + ' / ' + total;
-        });
-
-        // Reset when audio ends
-        audio.addEventListener('ended', () => {
-            isPlaying = false;
-            updatePlayButton();
-            progress.style.width = '0%';
-        });
-
-        function formatTime(seconds) {
-            if (isNaN(seconds)) return '0:00';
-            const mins = Math.floor(seconds / 60);
-            const secs = Math.floor(seconds % 60);
-            return mins + ':' + (secs < 10 ? '0' : '') + secs;
-        }
-
-        // Click on progress bar to seek
-        document.querySelector('.progress-bar').addEventListener('click', (e) => {
-            if (!currentDemo) return;
-            const rect = e.target.getBoundingClientRect();
-            const pos = (e.clientX - rect.left) / rect.width;
-            audio.currentTime = pos * audio.duration;
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
-
 </html>

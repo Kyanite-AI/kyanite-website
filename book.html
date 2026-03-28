@@ -1,163 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Book a Free Call - Kyanite AI Agency</title>
-    <link rel="stylesheet" href="styles.css?v=2">
+    <title>Book a Pilot | Kyanite AI Agency</title>
+    <meta name="description" content="Book a pilot with Kyanite and map your AI receptionist around the call flows that matter most to your business.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css?v=3">
     <link rel="icon" type="image/svg+xml" href="kyanite-crystal.svg?v=2">
     <link rel="shortcut icon" type="image/svg+xml" href="kyanite-crystal.svg?v=2">
     <link rel="apple-touch-icon" href="kyanite-crystal.svg?v=2">
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-DKX409C8V3"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-DKX409C8V3');
-</script>
-
-
-    <!-- Schema.org JSON-LD for LLM Discovery -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@graph": [
-            {
-                "@type": "WebPage",
-                "@id": "https://kyaniteagency.com/book.html#webpage",
-                "url": "https://kyaniteagency.com/book.html",
-                "name": "Book a Free Call - Kyanite AI",
-                "isPartOf": {
-                    "@id": "https://kyaniteagency.com/#website"
-                },
-                "about": {
-                    "@id": "https://kyaniteagency.com/#organization"
-                },
-                "description": "Book a free consultation call with Kyanite AI to discuss your AI automation needs. No commitment, no setup fee.",
-                "inLanguage": "en",
-                "dateModified": "2026-02-26"
-            },
-            {
-                "@type": "Service",
-                "serviceType": "Free Consultation Call",
-                "provider": {
-                    "@id": "https://kyaniteagency.com/#organization"
-                },
-                "name": "Free AI Automation Consultation",
-                "description": "Book a no-obligation consultation call to discuss how Kyanite AI can transform your business operations with 24/7 voice automation.",
-                "offers": {
-                    "@type": "Offer",
-                    "price": "0",
-                    "priceCurrency": "SEK",
-                    "availability": "https://schema.org/InStock",
-                    "areaServed": "SE",
-                    "eligibleTransactionVolume": {
-                        "@type": "PriceSpecification",
-                        "priceCurrency": "SEK",
-                        "minPrice": "500",
-                        "maxPrice": "5000+"
-                    }
-                },
-                "hasOfferCatalog": {
-                    "@type": "OfferCatalog",
-                    "name": "AI Automation Services",
-                    "itemListElement": [
-                        {
-                            "@type": "Offer",
-                            "itemOffered": {
-                                "@type": "Service",
-                                "name": "Free 1-Week Pilot",
-                                "description": "Try our AI receptionist for 7 days with no upfront cost or commitment"
-                            }
-                        },
-                        {
-                            "@type": "Offer",
-                            "itemOffered": {
-                                "@type": "Service",
-                                "name": "Custom AI Solutions",
-                                "description": "Tailored AI automation for your specific business needs"
-                            }
-                        }
-                    ]
-                }
-            },
-            {
-                "@type": "FAQPage",
-                "mainEntity": [
-                    {
-                        "@type": "Question",
-                        "name": "How do I book a free pilot with Kyanite?",
-                        "acceptedAnswer": {
-                            "@type": "Answer",
-                            "text": "Simply fill out the booking form with your name, email, company, and budget range. We'll respond within 2 hours during business days to schedule your free 1-week pilot."
-                        }
-                    },
-                    {
-                        "@type": "Question",
-                        "name": "What budget ranges does Kyanite serve?",
-                        "acceptedAnswer": {
-                            "@type": "Answer",
-                            "text": "We work with businesses across various budget ranges, from $500 to $5,000+. Contact us to discuss a solution that fits your specific needs and budget."
-                        }
-                    },
-                    {
-                        "@type": "Question",
-                        "name": "Is there any commitment for the free pilot?",
-                        "acceptedAnswer": {
-                            "@type": "Answer",
-                            "text": "No commitment whatsoever. The 1-week pilot is completely free with no setup fee. After 7 days, you decide if you want to continue with our service."
-                        }
-                    }
-                ]
-            }
-        ]
-    }
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DKX409C8V3"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag("js", new Date());
+        gtag("config", "G-DKX409C8V3");
     </script>
 </head>
-
 <body>
-    <!-- Background layers -->
-    <div class="gradient-background"></div>
-    <div class="dotted-grid"></div>
-    <div class="blur-shapes">
-        <div class="blur-shape shape-1"></div>
-        <div class="blur-shape shape-2"></div>
-        <div class="blur-shape shape-3"></div>
-        <div class="blur-shape shape-4"></div>
-        <div class="blur-shape shape-5"></div>
-        <div class="blur-shape shape-6"></div>
+    <div class="site-bg">
+        <div class="site-grid"></div>
     </div>
 
-    <!-- Back button -->
-    <header class="back-header">
-        <a href="index.html" class="back-btn" data-i18n="book_back">← Home</a>
-        <button class="lang-switcher" id="lang-switcher" aria-label="Switch language" onclick="toggleLanguage()">
-            <span class="lang-flag">🇬🇧</span>
-            <span class="lang-text">EN</span>
-        </button>
+    <header class="site-header" data-header>
+        <div class="container">
+            <a href="index.html" class="brand-lockup" aria-label="Kyanite home">
+                <img src="kyanite-crystal.svg" alt="" class="brand-mark">
+                <span class="brand-wording">
+                    <span class="brand-name">Kyanite</span>
+                    <span class="brand-meta">AI voice operations</span>
+                </span>
+            </a>
+
+            <div class="nav-shell">
+                <nav class="site-nav" data-nav>
+                    <a href="index.html" data-i18n="nav_home">Home</a>
+                    <a href="index.html#workflow" data-i18n="nav_workflow">Workflow</a>
+                    <a href="index.html#industries" data-i18n="nav_industries">Industries</a>
+                    <a href="demo.html" data-i18n="nav_demo">Listen to demo</a>
+                </nav>
+                <button class="lang-switcher" type="button" aria-label="Switch language" onclick="toggleLanguage()">
+                    <span class="lang-flag">🇬🇧</span>
+                    <span class="lang-text">EN</span>
+                </button>
+                <button class="mobile-toggle" type="button" aria-label="Toggle navigation" data-nav-toggle>
+                    <span></span>
+                </button>
+            </div>
+        </div>
     </header>
 
-    <main class="booking-container">
-        <h1 class="section-header" data-i18n="book_title">Book a Free Call</h1>
+    <main>
+        <section class="hero">
+            <div class="container book-shell">
+                <div class="book-layout">
+                    <div class="book-visual reveal">
+                        <div class="eyebrow" data-i18n="book_eyebrow">Book the pilot</div>
+                        <h1 class="section-title" data-i18n="book_title">Design the call flow around your real inbound pressure.</h1>
+                        <p class="section-lead" data-i18n="book_lead">Tell us what your line handles today and we will map the pilot around the calls that matter most first.</p>
+                        <div class="book-points">
+                            <span data-i18n="book_point_1">15-minute scoping call with Kyanite</span>
+                            <span data-i18n="book_point_2">Pilot recommendation based on your current volume</span>
+                            <span data-i18n="book_point_3">No long rollout required to get started</span>
+                        </div>
+                        <div class="meta-stack">
+                            <div>
+                                <strong data-i18n="book_meta_1_label">Email</strong>
+                                <span data-i18n="book_meta_1_value">kyaniteautomations@gmail.com</span>
+                            </div>
+                            <div>
+                                <strong data-i18n="book_meta_2_label">Phone</strong>
+                                <span data-i18n="book_meta_2_value">+46 76 329 28 61</span>
+                            </div>
+                            <div>
+                                <strong data-i18n="book_meta_3_label">Base</strong>
+                                <span data-i18n="book_meta_3_value">Stockholm, Sweden</span>
+                            </div>
+                        </div>
+                    </div>
 
-        <form action="https://formspree.io/f/mbddgbek" method="POST" class="booking-form">
-            <input type="text" name="name" data-i18n-placeholder="book_name" placeholder="Your Name *" required>
-            <input type="email" name="email" data-i18n-placeholder="book_email" placeholder="Work Email *" required>
-            <input type="tel" name="phone" data-i18n-placeholder="book_phone" placeholder="Phone (optional)">
-            <input type="text" name="company" data-i18n-placeholder="book_company" placeholder="Company Name *" required>
-
-            <textarea name="details" data-i18n-placeholder="book_details" placeholder="Tell us more about your project..." rows="5"></textarea>
-
-            <div class="form-footer">
-                <button type="submit" class="cta-btn" data-i18n="book_submit">Submit</button>
+                    <div class="form-shell reveal">
+                        <div>
+                            <h2 class="panel-title" data-i18n="book_form_title">Share your setup</h2>
+                            <p class="form-copy" data-i18n="book_form_copy">We reply with a next-step plan, pilot timing, and the best starting workflow.</p>
+                        </div>
+                        <form action="https://formspree.io/f/mbddgbek" method="POST">
+                            <label>
+                                <span data-i18n="book_name_label">Name</span>
+                                <input type="text" name="name" required data-i18n-placeholder="book_name_placeholder" placeholder="Your name">
+                            </label>
+                            <label>
+                                <span data-i18n="book_email_label">Work email</span>
+                                <input type="email" name="email" required data-i18n-placeholder="book_email_placeholder" placeholder="name@company.com">
+                            </label>
+                            <label>
+                                <span data-i18n="book_phone_label">Phone</span>
+                                <input type="tel" name="phone" data-i18n-placeholder="book_phone_placeholder" placeholder="+46 ...">
+                            </label>
+                            <label>
+                                <span data-i18n="book_company_label">Company</span>
+                                <input type="text" name="company" required data-i18n-placeholder="book_company_placeholder" placeholder="Company name">
+                            </label>
+                            <label>
+                                <span data-i18n="book_details_label">Current call flow</span>
+                                <textarea name="details" data-i18n-placeholder="book_details_placeholder" placeholder="What kinds of calls do you want the AI to handle first?"></textarea>
+                            </label>
+                            <button type="submit" class="button button-primary" data-i18n="book_submit">Request the pilot</button>
+                        </form>
+                        <p class="form-note" data-i18n="book_note">No setup fee for the initial scoping conversation.</p>
+                    </div>
+                </div>
             </div>
-        </form>
+        </section>
     </main>
 
     <script src="translations.js"></script>
+    <script src="script.js"></script>
 </body>
-
 </html>
